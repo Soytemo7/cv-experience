@@ -1,9 +1,13 @@
 import Home from "./pages/Home/Home";
-
-import "./styles/global.css";
+import SEO from "./components/SEO/SEO";
 
 function App() {
-  return <Home />;
+  return (
+    <>
+      <SEO />
+      <Home />
+    </>
+  );
 }
 
 export default App;
