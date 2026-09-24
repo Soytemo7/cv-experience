@@ -9,7 +9,7 @@ import {
   ScrollTrigger
 } from "gsap/ScrollTrigger";
 
-import "../../styles/Experience/Experience.css";
+import "../../styles/Experience/experience.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
