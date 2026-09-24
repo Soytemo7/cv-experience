@@ -1,0 +1,1929 @@
+/* ============================================================
+   ABOUT
+
+   Sección editorial / profesional
+   ============================================================ */
+
+.about {
+  position: relative;
+  width: 100%;
+  min-height: 0;
+  overflow: clip;
+
+  background:
+    radial-gradient(
+      ellipse at 50% 18%,
+      rgba(190, 205, 214, 0.075),
+      transparent 34%
+    ),
+    radial-gradient(
+      ellipse at 8% 48%,
+      rgba(130, 150, 162, 0.035),
+      transparent 30%
+    ),
+    radial-gradient(
+      ellipse at 92% 72%,
+      rgba(130, 150, 162, 0.032),
+      transparent 32%
+    ),
+    #020304;
+
+  color: #ffffff;
+}
+
+/* ============================================================
+   CANVAS
+   ============================================================ */
+
+.about-canvas {
+  position: fixed;
+  z-index: 0;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  pointer-events: none;
+
+  opacity: 0.9;
+
+  mix-blend-mode: screen;
+}
+
+/* ============================================================
+   ATMÓSFERA
+   ============================================================ */
+
+.about-atmosphere {
+  position: fixed;
+  z-index: 1;
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(18, 24, 29, 0.08) 0%,
+      transparent 20%
+    ),
+    radial-gradient(
+      ellipse at center,
+      transparent 18%,
+      rgba(0, 0, 0, 0.12) 48%,
+      rgba(0, 0, 0, 0.52) 78%,
+      rgba(0, 0, 0, 0.88) 100%
+    );
+
+  opacity: 0;
+}
+
+/* ============================================================
+   CONTENIDO
+   ============================================================ */
+
+.about-content {
+  position: relative;
+  z-index: 5;
+
+  width:
+    min(
+      1380px,
+      calc(100% - 80px)
+    );
+
+  margin: 0 auto;
+
+  padding:
+    15vh 0
+    4vh;
+
+  transform-origin:
+    center top;
+}
+
+/* ============================================================
+   CABECERA
+   ============================================================ */
+
+.about-header {
+  position: relative;
+
+  min-height: 34vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  margin-bottom: 14vh;
+
+  will-change:
+    transform,
+    opacity;
+}
+
+.about-header-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 38px;
+  padding-bottom: 16px;
+
+  border-bottom:
+    1px solid
+    rgba(205, 218, 225, 0.13);
+
+  font-size: 9px;
+  font-weight: 600;
+
+  letter-spacing:
+    0.24em;
+
+  color:
+    rgba(205, 218, 225, 0.4);
+}
+
+.about-title-wrapper {
+  position: relative;
+}
+
+.about-title-ghost {
+  position: absolute;
+  z-index: 0;
+
+  left: 5px;
+  top: -34px;
+
+  font-size:
+    clamp(
+      90px,
+      18vw,
+      270px
+    );
+
+  font-weight: 700;
+
+  line-height: 0.8;
+
+  letter-spacing:
+    -0.09em;
+
+  color:
+    rgba(190, 205, 214, 0.026);
+
+  pointer-events: none;
+
+  will-change:
+    transform,
+    opacity;
+}
+
+.about-title {
+  position: relative;
+  z-index: 2;
+
+  margin: 0;
+
+  font-size:
+    clamp(
+      68px,
+      9.5vw,
+      150px
+    );
+
+  font-weight: 500;
+
+  line-height: 0.82;
+
+  letter-spacing:
+    -0.07em;
+
+  color: #ffffff;
+
+  will-change:
+    transform,
+    opacity;
+}
+
+.about-title span {
+  color:
+    rgba(185, 202, 212, 0.25);
+}
+
+.about-title-line {
+  width: 100%;
+  height: 1px;
+
+  margin-top: 38px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(205, 218, 225, 0.65),
+      rgba(145, 164, 176, 0.15) 50%,
+      transparent
+    );
+
+  transform-origin:
+    left center;
+}
+
+/* ============================================================
+   INTRODUCCIÓN
+   ============================================================ */
+
+.about-introduction {
+  position: relative;
+
+  width:
+    min(
+      1090px,
+      100%
+    );
+
+  margin-left: auto;
+
+  margin-bottom: 19vh;
+
+  will-change:
+    transform;
+
+  --intro-line:
+    0;
+}
+
+/* Línea vertical técnica del bloque */
+
+.about-introduction::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 1px;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent,
+      rgba(190, 207, 216, 0.10) 10%,
+      rgba(190, 207, 216, 0.05) 90%,
+      transparent
+    );
+
+  pointer-events: none;
+}
+
+/* PÁRRAFOS */
+
+.about-introduction > p {
+  position: relative;
+
+  margin:
+    0 0 34px;
+
+  padding-left: 30px;
+
+  font-size:
+    clamp(
+      17px,
+      1.32vw,
+      21px
+    );
+
+  line-height: 1.88;
+
+  letter-spacing:
+    -0.012em;
+
+  color:
+    rgba(215, 224, 229, 0.67);
+
+  will-change:
+    transform,
+    opacity,
+    filter,
+    clip-path;
+
+  --intro-line:
+    0;
+}
+
+/*
+ * Línea técnica individual.
+ *
+ * GSAP controla --intro-line.
+ */
+
+.about-introduction > p::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0.85em;
+
+  width: 10px;
+  height: 1px;
+
+  background:
+    rgba(190, 207, 216, 0.48);
+
+  transform:
+    scaleX(
+      var(--intro-line)
+    );
+
+  transform-origin:
+    left center;
+
+  transition:
+    background 0.4s ease;
+}
+
+/*
+ * Pequeño resplandor que acompaña
+ * la línea durante el estado activo.
+ */
+
+.about-introduction > p::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: calc(0.85em - 2px);
+
+  width: 10px;
+  height: 5px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(220, 230, 235, 0.18),
+      transparent
+    );
+
+  opacity:
+    var(--intro-line);
+
+  transform:
+    translateX(
+      calc(
+        var(--intro-line) * 2px
+      )
+    );
+
+  pointer-events: none;
+}
+
+.about-introduction > p::first-letter {
+  color: #ffffff;
+}
+
+/*
+ * El párrafo final funciona como
+ * remate visual de la introducción.
+ */
+
+.about-introduction > p:last-child {
+  margin-top: 64px;
+  margin-bottom: 0;
+
+  padding-top: 28px;
+
+  border-top:
+    1px solid
+    rgba(195, 210, 218, 0.12);
+
+  color:
+    rgba(215, 224, 229, 0.76);
+
+  font-size:
+    clamp(
+      18px,
+      1.38vw,
+      22px
+    );
+}
+
+.about-introduction > p:last-child::before {
+  top:
+    calc(
+      28px + 0.85em
+    );
+
+  width: 24px;
+}
+
+.about-introduction > p:last-child::after {
+  top:
+    calc(
+      28px + 0.85em - 2px
+    );
+
+  width: 24px;
+}
+
+/* ============================================================
+   LIBROS
+   ============================================================ */
+
+.about-books {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+
+  gap:
+    0 55px;
+
+  margin:
+    48px 0
+    54px;
+
+  padding: 0;
+
+  list-style: none;
+
+  counter-reset:
+    about-books;
+
+  --intro-line:
+    1;
+}
+
+/*
+ * Línea técnica vertical
+ * que une discretamente la lista.
+ */
+
+.about-books::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+  width: 1px;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent,
+      rgba(190, 207, 216, 0.13),
+      transparent
+    );
+
+  pointer-events: none;
+}
+
+.about-books li {
+  position: relative;
+
+  min-height: 92px;
+
+  display: flex;
+  align-items: center;
+
+  padding:
+    18px
+    15px
+    18px
+    48px;
+
+  border-top:
+    1px solid
+    rgba(190, 205, 214, 0.10);
+
+  font-size: 14px;
+
+  line-height: 1.65;
+
+  color:
+    rgba(205, 218, 225, 0.5);
+
+  overflow: hidden;
+
+  will-change:
+    transform,
+    opacity,
+    filter,
+    clip-path;
+
+  --book-line:
+    0;
+
+  transition:
+    color 0.45s ease,
+    padding-left 0.45s
+      cubic-bezier(
+        0.22,
+        1,
+        0.36,
+        1
+      ),
+    border-color 0.45s ease,
+    background 0.45s ease;
+}
+
+/*
+ * Número editorial.
+ */
+
+.about-books li::before {
+  counter-increment:
+    about-books;
+
+  content:
+    counter(
+      about-books,
+      decimal-leading-zero
+    );
+
+  position: absolute;
+
+  left: 0;
+  top: 20px;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing:
+    0.16em;
+
+  color:
+    rgba(180, 198, 208, 0.27);
+
+  transition:
+    color 0.4s ease,
+    transform 0.45s
+      cubic-bezier(
+        0.22,
+        1,
+        0.36,
+        1
+      );
+}
+
+/*
+ * Línea inferior de cada libro.
+ */
+
+.about-books li::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width:
+    calc(
+      var(--book-line) *
+      100%
+    );
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(210, 221, 227, 0.58),
+      rgba(210, 221, 227, 0.08),
+      transparent
+    );
+
+  transform-origin:
+    left center;
+
+  transition:
+    width 0.45s
+      cubic-bezier(
+        0.22,
+        1,
+        0.36,
+        1
+      );
+}
+
+/*
+ * Pequeño destello de entrada.
+ */
+
+.about-books li > * {
+  position: relative;
+  z-index: 2;
+}
+
+.about-books li:hover {
+  padding-left: 58px;
+
+  color: #ffffff;
+
+  border-color:
+    rgba(195, 210, 218, 0.22);
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(170, 190, 201, 0.028),
+      transparent
+    );
+}
+
+.about-books li:hover::before {
+  color: #ffffff;
+
+  transform:
+    translateX(4px);
+}
+
+.about-books li:hover::after {
+  width: 100%;
+}
+
+/* ============================================================
+   PERFIL
+   ============================================================ */
+
+.about-profile {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(430px, 0.9fr)
+    minmax(500px, 1.1fr);
+
+  gap: 105px;
+
+  align-items: center;
+
+  min-height: 105vh;
+
+  padding:
+    14vh 0;
+
+  border-top:
+    1px solid
+    rgba(195, 210, 218, 0.13);
+
+  border-bottom:
+    1px solid
+    rgba(195, 210, 218, 0.13);
+
+  perspective:
+    1500px;
+
+  will-change:
+    transform,
+    opacity;
+}
+
+.about-profile::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  top: 50%;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(170, 190, 201, 0.045),
+      transparent
+    );
+
+  pointer-events: none;
+}
+
+/* ============================================================
+   VISUAL
+   ============================================================ */
+
+.about-profile-visual {
+  position: relative;
+
+  min-height: 720px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  transform-style:
+    preserve-3d;
+
+  will-change:
+    transform;
+}
+
+/* ============================================================
+   IDENTIFICADORES
+   ============================================================ */
+
+.about-profile-number {
+  position: absolute;
+
+  z-index: 20;
+
+  left: 0;
+  top: 0;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing:
+    0.2em;
+
+  color:
+    rgba(185, 202, 212, 0.32);
+}
+
+.about-profile-label {
+  position: absolute;
+
+  z-index: 20;
+
+  right: 0;
+  top: 0;
+
+  text-align: right;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  line-height: 1.6;
+
+  letter-spacing:
+    0.2em;
+
+  color:
+    rgba(185, 202, 212, 0.32);
+}
+
+/* ============================================================
+   LÍNEAS TÉCNICAS
+   ============================================================ */
+
+.about-visual-line {
+  position: absolute;
+
+  z-index: 2;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(200, 214, 222, 0.36),
+      transparent
+    );
+
+  transform-origin:
+    center center;
+}
+
+.about-visual-line-top {
+  width: 70%;
+  height: 1px;
+
+  top: 15%;
+  left: 15%;
+}
+
+.about-visual-line-bottom {
+  width: 74%;
+  height: 1px;
+
+  bottom: 15%;
+  left: 7%;
+}
+
+.about-visual-line-left {
+  width: 36%;
+  height: 1px;
+
+  left: -3%;
+  top: 50%;
+
+  transform:
+    rotate(90deg);
+}
+
+.about-visual-line-right {
+  width: 36%;
+  height: 1px;
+
+  right: -3%;
+  top: 50%;
+
+  transform:
+    rotate(90deg);
+}
+
+/* ============================================================
+   IMAGEN
+   ============================================================ */
+
+.about-image-wrapper {
+  position: relative;
+
+  z-index: 8;
+
+  width:
+    min(
+      420px,
+      78%
+    );
+
+  aspect-ratio:
+    0.78;
+
+  transform-style:
+    preserve-3d;
+
+  will-change:
+    transform;
+}
+
+.about-image {
+  position: relative;
+
+  z-index: 8;
+
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position:
+    center top;
+
+  border:
+    1px solid
+    rgba(195, 210, 218, 0.22);
+
+  filter:
+    grayscale(15%)
+    contrast(1.08)
+    brightness(0.92);
+
+  box-shadow:
+    0 50px 120px
+    rgba(0, 0, 0, 0.76);
+
+  transition:
+    filter 0.65s ease,
+    transform 0.8s
+      cubic-bezier(
+        0.22,
+        1,
+        0.36,
+        1
+      );
+
+  will-change:
+    transform;
+}
+
+.about-image-wrapper:hover
+.about-image {
+  filter:
+    grayscale(0%)
+    contrast(1.14)
+    brightness(1);
+
+  transform:
+    scale(1.025);
+}
+
+/* ============================================================
+   HALO
+   ============================================================ */
+
+.about-image-glow {
+  position: absolute;
+
+  z-index: 0;
+
+  inset:
+    -10%;
+
+  border-radius:
+    50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(180, 202, 214, 0.19),
+      rgba(150, 176, 190, 0.045) 35%,
+      transparent 70%
+    );
+
+  filter:
+    blur(65px);
+
+  pointer-events: none;
+}
+
+/* ============================================================
+   MARCO EXTERIOR
+   ============================================================ */
+
+.about-image-frame {
+  position: absolute;
+
+  z-index: 4;
+
+  inset:
+    30px -34px -34px 34px;
+
+  border:
+    1px solid
+    rgba(195, 210, 218, 0.24);
+
+  pointer-events: none;
+
+  transition:
+    transform 0.75s
+      cubic-bezier(
+        0.22,
+        1,
+        0.36,
+        1
+      ),
+    border-color 0.5s ease;
+}
+
+.about-image-wrapper:hover
+.about-image-frame {
+  transform:
+    translate(
+      15px,
+      -11px
+    )
+    rotate(7deg);
+
+  border-color:
+    rgba(215, 225, 231, 0.5);
+}
+
+/* ============================================================
+   MARCO INTERNO
+   ============================================================ */
+
+.about-image-frame-inner {
+  position: absolute;
+
+  z-index: 9;
+
+  inset:
+    14px;
+
+  border:
+    1px solid
+    rgba(195, 210, 218, 0.09);
+
+  pointer-events: none;
+
+  transition:
+    inset 0.6s ease,
+    border-color 0.5s ease;
+}
+
+.about-image-wrapper:hover
+.about-image-frame-inner {
+  inset: 21px;
+
+  border-color:
+    rgba(195, 210, 218, 0.23);
+}
+
+/* ============================================================
+   BARRIDO
+   ============================================================ */
+
+.about-image-sweep {
+  position: absolute;
+
+  z-index: 12;
+
+  top: -10%;
+  left: 0;
+
+  width: 35%;
+  height: 120%;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(205, 220, 227, 0.25),
+      transparent
+    );
+
+  filter:
+    blur(8px);
+
+  transform:
+    skewX(-12deg);
+
+  pointer-events: none;
+
+  mix-blend-mode:
+    screen;
+}
+
+/* ============================================================
+   OVERLAY
+   ============================================================ */
+
+.about-image-overlay {
+  position: absolute;
+
+  z-index: 10;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(205, 220, 227, 0.09),
+      transparent 22%,
+      transparent 68%,
+      rgba(0, 0, 0, 0.34)
+    );
+
+  mix-blend-mode:
+    screen;
+
+  opacity: 0.42;
+
+  transition:
+    opacity 0.5s ease;
+}
+
+.about-image-wrapper:hover
+.about-image-overlay {
+  opacity: 0.75;
+}
+
+/* ============================================================
+   ESQUINAS
+   ============================================================ */
+
+.about-image-corner {
+  position: absolute;
+
+  z-index: 15;
+
+  width: 26px;
+  height: 26px;
+
+  border-color:
+    rgba(205, 220, 227, 0.68);
+
+  border-style: solid;
+
+  opacity: 0.5;
+
+  transition:
+    width 0.45s ease,
+    height 0.45s ease,
+    opacity 0.4s ease;
+}
+
+.about-image-wrapper:hover
+.about-image-corner {
+  width: 38px;
+  height: 38px;
+
+  opacity: 1;
+}
+
+.about-image-corner-tl {
+  top: -9px;
+  left: -9px;
+
+  border-width:
+    1px 0 0 1px;
+}
+
+.about-image-corner-tr {
+  top: -9px;
+  right: -9px;
+
+  border-width:
+    1px 1px 0 0;
+}
+
+.about-image-corner-bl {
+  bottom: -9px;
+  left: -9px;
+
+  border-width:
+    0 0 1px 1px;
+}
+
+.about-image-corner-br {
+  right: -9px;
+  bottom: -9px;
+
+  border-width:
+    0 1px 1px 0;
+}
+
+/* ============================================================
+   CAPTION
+   ============================================================ */
+
+.about-image-caption {
+  position: absolute;
+
+  z-index: 20;
+
+  left: -22px;
+  bottom: -50px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  letter-spacing:
+    0.2em;
+
+  color:
+    rgba(185, 202, 212, 0.38);
+
+  transition:
+    color 0.4s ease,
+    transform 0.4s ease;
+}
+
+.about-image-wrapper:hover
+.about-image-caption {
+  color: #ffffff;
+
+  transform:
+    translateX(9px);
+}
+
+/* ============================================================
+   DETALLES
+   ============================================================ */
+
+.about-profile-details {
+  max-width: 700px;
+
+  will-change:
+    transform,
+    opacity;
+}
+
+.about-name-block {
+  margin-bottom: 28px;
+}
+
+.about-name-block > span {
+  display: block;
+
+  margin-bottom: 14px;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing:
+    0.25em;
+
+  text-transform:
+    uppercase;
+
+  color:
+    rgba(185, 202, 212, 0.36);
+}
+
+.about-name-block h3 {
+  margin: 0;
+
+  font-size:
+    clamp(
+      38px,
+      4.5vw,
+      68px
+    );
+
+  font-weight: 500;
+
+  line-height: 0.9;
+
+  letter-spacing:
+    -0.055em;
+}
+
+.about-professional-title {
+  margin:
+    0 0 38px;
+
+  font-size:
+    clamp(
+      20px,
+      1.7vw,
+      27px
+    );
+
+  line-height: 1.35;
+
+  letter-spacing:
+    -0.025em;
+
+  color:
+    rgba(205, 218, 225, 0.63);
+}
+
+.about-summary {
+  margin:
+    0 0 50px;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+
+  color:
+    rgba(205, 218, 225, 0.56);
+}
+
+/* ============================================================
+   DATOS
+   ============================================================ */
+
+.about-data-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(0, 1fr)
+    );
+
+  border-top:
+    1px solid
+    rgba(195, 210, 218, 0.11);
+
+  border-left:
+    1px solid
+    rgba(195, 210, 218, 0.11);
+}
+
+.about-data-item {
+  position: relative;
+
+  min-height: 98px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  gap: 9px;
+
+  padding:
+    18px 22px;
+
+  overflow: hidden;
+
+  border-right:
+    1px solid
+    rgba(195, 210, 218, 0.11);
+
+  border-bottom:
+    1px solid
+    rgba(195, 210, 218, 0.11);
+
+  transition:
+    background 0.45s ease,
+    transform 0.45s
+      cubic-bezier(
+        0.22,
+        1,
+        0.36,
+        1
+      ),
+    border-color 0.45s ease;
+}
+
+.about-data-item::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 2px;
+  height: 100%;
+
+  background:
+    rgba(210, 222, 228, 0.8);
+
+  transform:
+    scaleY(0);
+
+  transform-origin:
+    bottom;
+
+  transition:
+    transform 0.45s
+      cubic-bezier(
+        0.22,
+        1,
+        0.36,
+        1
+      );
+}
+
+.about-data-item::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      120deg,
+      rgba(180, 201, 212, 0.065),
+      transparent 55%
+    );
+
+  opacity: 0;
+
+  transition:
+    opacity 0.45s ease;
+}
+
+.about-data-item:hover {
+  background:
+    rgba(170, 192, 203, 0.035);
+
+  transform:
+    translateX(6px);
+
+  border-color:
+    rgba(195, 210, 218, 0.23);
+}
+
+.about-data-item:hover::before {
+  transform:
+    scaleY(1);
+}
+
+.about-data-item:hover::after {
+  opacity: 1;
+}
+
+.about-data-item span,
+.about-data-item strong {
+  position: relative;
+  z-index: 2;
+}
+
+.about-data-item span {
+  font-size: 8px;
+
+  font-weight: 600;
+
+  letter-spacing:
+    0.19em;
+
+  text-transform:
+    uppercase;
+
+  color:
+    rgba(185, 202, 212, 0.32);
+}
+
+.about-data-item strong {
+  font-size: 13px;
+
+  font-weight: 500;
+
+  line-height: 1.45;
+
+  color:
+    rgba(215, 224, 229, 0.74);
+}
+
+/* ============================================================
+   CONTACTO
+   ============================================================ */
+
+.about-contact {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  margin-top: 28px;
+}
+
+.about-contact > span {
+  font-size: 8px;
+
+  font-weight: 600;
+
+  letter-spacing:
+    0.2em;
+
+  text-transform:
+    uppercase;
+
+  color:
+    rgba(185, 202, 212, 0.32);
+}
+
+.about-contact a {
+  position: relative;
+
+  color:
+    rgba(210, 222, 228, 0.68);
+
+  font-size: 14px;
+
+  text-decoration: none;
+
+  transition:
+    color 0.3s ease;
+}
+
+.about-contact a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -6px;
+
+  width: 100%;
+  height: 1px;
+
+  background:
+    #d8e2e7;
+
+  transform:
+    scaleX(0);
+
+  transform-origin:
+    right center;
+
+  transition:
+    transform 0.4s
+      cubic-bezier(
+        0.22,
+        1,
+        0.36,
+        1
+      );
+}
+
+.about-contact a:hover {
+  color: #ffffff;
+}
+
+.about-contact a:hover::after {
+  transform:
+    scaleX(1);
+
+  transform-origin:
+    left center;
+}
+
+/* ============================================================
+   CIERRE
+   ============================================================ */
+
+.about-closing {
+  min-height: 34vh;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    minmax(300px, 850px)
+    1fr;
+
+  align-items: center;
+
+  gap: 42px;
+
+  padding:
+    10vh 0
+    3vh;
+}
+
+.about-closing-line {
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(195, 210, 218, 0.30)
+    );
+
+  transform-origin:
+    center center;
+}
+
+.about-closing-line:last-child {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(195, 210, 218, 0.30),
+      transparent
+    );
+}
+
+.about-closing p {
+  margin: 0;
+
+  text-align: center;
+
+  font-size:
+    clamp(
+      20px,
+      2vw,
+      30px
+    );
+
+  line-height: 1.6;
+
+  letter-spacing:
+    -0.025em;
+
+  color:
+    rgba(205, 218, 225, 0.5);
+}
+
+/* ============================================================
+   ATMÓSFERA PROFUNDA
+   ============================================================ */
+
+.about::after {
+  content: "";
+
+  position: absolute;
+
+  z-index: 2;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      ellipse at 50% 40%,
+      rgba(18, 24, 29, 0.18),
+      transparent 42%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(2, 3, 4, 0.08),
+      rgba(2, 3, 4, 0.18) 55%,
+      rgba(0, 0, 0, 0.36)
+    );
+
+  opacity: 0.9;
+}
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 1050px) {
+  .about-content {
+    width:
+      min(
+        calc(100% - 50px),
+        920px
+      );
+  }
+
+  .about-profile {
+    grid-template-columns:
+      1fr;
+
+    gap: 90px;
+
+    min-height: auto;
+  }
+
+  .about-profile-visual {
+    min-height: 650px;
+  }
+
+  .about-profile-details {
+    max-width: none;
+  }
+}
+
+/* ============================================================
+   MÓVIL
+   ============================================================ */
+
+@media (max-width: 680px) {
+  .about {
+    min-height: 0;
+
+    background:
+      radial-gradient(
+        ellipse at 50% 16%,
+        rgba(180, 198, 208, 0.06),
+        transparent 34%
+      ),
+      radial-gradient(
+        ellipse at 50% 50%,
+        rgba(100, 120, 132, 0.025),
+        transparent 45%
+      ),
+      #020304;
+  }
+
+  .about-content {
+    width:
+      calc(100% - 34px);
+
+    padding:
+      10vh 0
+      3vh;
+  }
+
+  .about-header {
+    min-height: 27vh;
+
+    margin-bottom: 10vh;
+  }
+
+  .about-header-meta {
+    margin-bottom: 25px;
+  }
+
+  .about-title {
+    font-size:
+      clamp(
+        48px,
+        15vw,
+        82px
+      );
+  }
+
+  .about-title-ghost {
+    font-size: 29vw;
+
+    top: -8px;
+  }
+
+  .about-title-line {
+    margin-top: 25px;
+  }
+
+  .about-introduction {
+    margin-bottom: 13vh;
+  }
+
+  .about-introduction::before {
+    opacity: 0.65;
+  }
+
+  .about-introduction > p {
+    padding-left: 22px;
+
+    font-size: 16px;
+
+    line-height: 1.78;
+
+    margin-bottom: 27px;
+  }
+
+  .about-introduction > p::before {
+    width: 8px;
+  }
+
+  .about-introduction > p:last-child {
+    margin-top: 48px;
+
+    padding-top: 24px;
+
+    font-size: 17px;
+  }
+
+  .about-introduction > p:last-child::before {
+    top:
+      calc(
+        24px + 0.85em
+      );
+  }
+
+  .about-introduction > p:last-child::after {
+    top:
+      calc(
+        24px + 0.85em - 2px
+      );
+  }
+
+  .about-books {
+    grid-template-columns:
+      1fr;
+
+    gap: 0;
+
+    margin:
+      32px 0
+      40px;
+  }
+
+  .about-books li {
+    min-height: auto;
+
+    padding:
+      17px 0
+      17px 38px;
+  }
+
+  .about-books li:hover {
+    padding-left: 44px;
+  }
+
+  .about-profile {
+    display: block;
+
+    padding:
+      10vh 0;
+  }
+
+  .about-profile-visual {
+    min-height: 520px;
+
+    margin-bottom: 100px;
+  }
+
+  .about-image-wrapper {
+    width:
+      min(
+        315px,
+        72vw
+      );
+  }
+
+  .about-image-frame {
+    inset:
+      20px -18px -18px 18px;
+  }
+
+  .about-profile-label {
+    right: 0;
+  }
+
+  .about-profile-details {
+    width: 100%;
+  }
+
+  .about-name-block h3 {
+    font-size: 43px;
+  }
+
+  .about-professional-title {
+    font-size: 20px;
+  }
+
+  .about-summary {
+    font-size: 15px;
+  }
+
+  .about-data-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+  .about-data-item {
+    min-height: 82px;
+  }
+
+  .about-contact {
+    align-items:
+      flex-start;
+
+    flex-direction:
+      column;
+
+    gap: 10px;
+  }
+
+  .about-closing {
+    min-height: 26vh;
+
+    display: block;
+
+    padding:
+      8vh 0
+      2vh;
+  }
+
+  .about-closing-line {
+    display: block;
+
+    width: 100%;
+
+    margin:
+      25px 0;
+  }
+
+  .about-closing p {
+    font-size: 19px;
+  }
+}
+
+/* ============================================================
+   MÓVIL PEQUEÑO
+   ============================================================ */
+
+@media (max-width: 420px) {
+  .about-content {
+    width:
+      calc(100% - 28px);
+  }
+
+  .about-title {
+    font-size:
+      clamp(
+        44px,
+        15vw,
+        72px
+      );
+  }
+
+  .about-profile-visual {
+    min-height: 470px;
+  }
+
+  .about-image-wrapper {
+    width:
+      min(
+        280px,
+        70vw
+      );
+  }
+
+  .about-image-caption {
+    left: -5px;
+  }
+}
+
+/* ============================================================
+   REDUCCIÓN DE MOVIMIENTO
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .about-canvas {
+    opacity: 0.3;
+  }
+
+  .about-image,
+  .about-image-frame,
+  .about-image-frame-inner,
+  .about-data-item,
+  .about-books li {
+    transition: none;
+  }
+}

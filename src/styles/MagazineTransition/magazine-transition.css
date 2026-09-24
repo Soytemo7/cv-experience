@@ -1,0 +1,621 @@
+/* ============================================================
+   MAGAZINE TRANSITION
+   Transición visual independiente
+
+   Sin imagen.
+   Sin tarjetas.
+   Sin contenido editorial.
+   Sin círculos como recurso principal.
+
+   La composición se construye mediante:
+   - partículas
+   - líneas
+   - retícula
+   - perspectiva
+   - estructuras
+   - desplazamientos
+   - compresión
+   - explosión
+   - reorganización
+   - salida
+   ============================================================ */
+
+
+/* ============================================================
+   SECCIÓN
+   ============================================================ */
+
+.magazine-transition {
+  position: relative;
+
+  width: 100%;
+  height: 300vh;
+
+  overflow: clip;
+
+  background:
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(255, 255, 255, 0.045),
+      transparent 38%
+    ),
+    linear-gradient(
+      180deg,
+      #050505 0%,
+      #080808 50%,
+      #050505 100%
+    );
+
+  color: #ffffff;
+}
+
+
+/* ============================================================
+   STICKY
+   ============================================================ */
+
+.magazine-transition-sticky {
+  position: sticky;
+
+  top: 0;
+
+  width: 100%;
+  height: 100vh;
+
+  overflow: hidden;
+}
+
+
+/* ============================================================
+   ESCENA
+   ============================================================ */
+
+.magazine-transition-scene {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  transform-style: preserve-3d;
+
+  perspective: 1400px;
+
+  will-change:
+    transform,
+    opacity;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.018),
+      transparent 25%,
+      transparent 75%,
+      rgba(255, 255, 255, 0.018)
+    );
+}
+
+
+/* ============================================================
+   CANVAS
+   ============================================================ */
+
+.magazine-transition-canvas {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 1;
+
+  display: block;
+
+  pointer-events: none;
+}
+
+
+/* ============================================================
+   ESTRUCTURAS DOM
+   ============================================================ */
+
+.magazine-transition-structure {
+  position: absolute;
+
+  z-index: 4;
+
+  pointer-events: none;
+
+  will-change:
+    transform,
+    opacity;
+}
+
+
+/* ============================================================
+   ESTRUCTURA IZQUIERDA
+   ============================================================ */
+
+.magazine-transition-structure-left {
+  left: 0;
+  top: 18%;
+
+  width: 23vw;
+  height: 64vh;
+
+  border-right:
+    1px solid
+    rgba(255, 255, 255, 0.12);
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.055);
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.055);
+}
+
+
+.magazine-transition-structure-left span {
+  position: absolute;
+
+  left: 0;
+
+  width: 100%;
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.16)
+    );
+}
+
+
+.magazine-transition-structure-left span:nth-child(1) {
+  top: 8%;
+}
+
+
+.magazine-transition-structure-left span:nth-child(2) {
+  top: 23%;
+}
+
+
+.magazine-transition-structure-left span:nth-child(3) {
+  top: 41%;
+}
+
+
+.magazine-transition-structure-left span:nth-child(4) {
+  top: 58%;
+}
+
+
+.magazine-transition-structure-left span:nth-child(5) {
+  top: 76%;
+}
+
+
+.magazine-transition-structure-left span:nth-child(6) {
+  top: 91%;
+}
+
+
+/* ============================================================
+   ESTRUCTURA DERECHA
+   ============================================================ */
+
+.magazine-transition-structure-right {
+  right: 0;
+  top: 18%;
+
+  width: 23vw;
+  height: 64vh;
+
+  border-left:
+    1px solid
+    rgba(255, 255, 255, 0.12);
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.055);
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.055);
+}
+
+
+.magazine-transition-structure-right span {
+  position: absolute;
+
+  right: 0;
+
+  width: 100%;
+  height: 1px;
+
+  background:
+    linear-gradient(
+      270deg,
+      transparent,
+      rgba(255, 255, 255, 0.16)
+    );
+}
+
+
+.magazine-transition-structure-right span:nth-child(1) {
+  top: 8%;
+}
+
+
+.magazine-transition-structure-right span:nth-child(2) {
+  top: 23%;
+}
+
+
+.magazine-transition-structure-right span:nth-child(3) {
+  top: 41%;
+}
+
+
+.magazine-transition-structure-right span:nth-child(4) {
+  top: 58%;
+}
+
+
+.magazine-transition-structure-right span:nth-child(5) {
+  top: 76%;
+}
+
+
+.magazine-transition-structure-right span:nth-child(6) {
+  top: 91%;
+}
+
+
+/* ============================================================
+   ESTRUCTURA SUPERIOR
+   ============================================================ */
+
+.magazine-transition-structure-top {
+  left: 17%;
+  top: 0;
+
+  width: 66%;
+  height: 17vh;
+
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.1);
+}
+
+
+.magazine-transition-structure-top span {
+  position: absolute;
+
+  top: 0;
+
+  width: 1px;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.16),
+      transparent
+    );
+}
+
+
+.magazine-transition-structure-top span:nth-child(1) {
+  left: 12%;
+}
+
+
+.magazine-transition-structure-top span:nth-child(2) {
+  left: 36%;
+}
+
+
+.magazine-transition-structure-top span:nth-child(3) {
+  left: 64%;
+}
+
+
+.magazine-transition-structure-top span:nth-child(4) {
+  left: 88%;
+}
+
+
+/* ============================================================
+   ESTRUCTURA INFERIOR
+   ============================================================ */
+
+.magazine-transition-structure-bottom {
+  left: 17%;
+  bottom: 0;
+
+  width: 66%;
+  height: 17vh;
+
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.1);
+}
+
+
+.magazine-transition-structure-bottom span {
+  position: absolute;
+
+  bottom: 0;
+
+  width: 1px;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.16),
+      transparent
+    );
+}
+
+
+.magazine-transition-structure-bottom span:nth-child(1) {
+  left: 12%;
+}
+
+
+.magazine-transition-structure-bottom span:nth-child(2) {
+  left: 36%;
+}
+
+
+.magazine-transition-structure-bottom span:nth-child(3) {
+  left: 64%;
+}
+
+
+.magazine-transition-structure-bottom span:nth-child(4) {
+  left: 88%;
+}
+
+
+/* ============================================================
+   SCANLINES
+   ============================================================ */
+
+.magazine-transition-scanlines {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 5;
+
+  pointer-events: none;
+
+  opacity: 0.045;
+
+  background:
+    repeating-linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.8) 0,
+      rgba(255, 255, 255, 0.8) 1px,
+      transparent 1px,
+      transparent 5px
+    );
+
+  mix-blend-mode: screen;
+}
+
+
+/* ============================================================
+   GRAIN
+   ============================================================ */
+
+.magazine-transition-grain {
+  position: absolute;
+
+  inset: -50%;
+
+  z-index: 8;
+
+  pointer-events: none;
+
+  opacity: 0.045;
+
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='.7'/%3E%3C/svg%3E");
+
+  mix-blend-mode: screen;
+
+  animation:
+    magazine-transition-grain
+    0.16s
+    steps(2)
+    infinite;
+}
+
+
+@keyframes magazine-transition-grain {
+  0% {
+    transform:
+      translate3d(
+        0,
+        0,
+        0
+      );
+  }
+
+  25% {
+    transform:
+      translate3d(
+        2%,
+        -1%,
+        0
+      );
+  }
+
+  50% {
+    transform:
+      translate3d(
+        -1%,
+        2%,
+        0
+      );
+  }
+
+  75% {
+    transform:
+      translate3d(
+        1%,
+        1%,
+        0
+      );
+  }
+
+  100% {
+    transform:
+      translate3d(
+        -2%,
+        -1%,
+        0
+      );
+  }
+}
+
+
+/* ============================================================
+   BORDES
+   ============================================================ */
+
+.magazine-transition-edge {
+  position: absolute;
+
+  z-index: 7;
+
+  pointer-events: none;
+
+  background:
+    rgba(255, 255, 255, 0.18);
+}
+
+
+.magazine-transition-edge-top {
+  left: 0;
+  top: 0;
+
+  width: 100%;
+  height: 1px;
+}
+
+
+.magazine-transition-edge-right {
+  right: 0;
+  top: 0;
+
+  width: 1px;
+  height: 100%;
+}
+
+
+.magazine-transition-edge-bottom {
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 1px;
+}
+
+
+.magazine-transition-edge-left {
+  left: 0;
+  top: 0;
+
+  width: 1px;
+  height: 100%;
+}
+
+
+/* ============================================================
+   FLASH
+   ============================================================ */
+
+.magazine-transition-flash {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 10;
+
+  pointer-events: none;
+
+  background:
+    rgba(255, 255, 255, 0.9);
+
+  opacity: 0;
+
+  mix-blend-mode: screen;
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 900px) {
+  .magazine-transition {
+    height: 290vh;
+  }
+
+  .magazine-transition-structure-left,
+  .magazine-transition-structure-right {
+    width: 17vw;
+  }
+
+  .magazine-transition-structure-top,
+  .magazine-transition-structure-bottom {
+    left: 12%;
+    width: 76%;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .magazine-transition {
+    height: 270vh;
+  }
+
+  .magazine-transition-structure-left,
+  .magazine-transition-structure-right {
+    width: 12vw;
+  }
+
+  .magazine-transition-structure-top,
+  .magazine-transition-structure-bottom {
+    left: 8%;
+    width: 84%;
+  }
+
+  .magazine-transition-scanlines {
+    opacity: 0.025;
+  }
+
+  .magazine-transition-grain {
+    opacity: 0.03;
+  }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .magazine-transition-grain {
+    animation: none;
+  }
+}

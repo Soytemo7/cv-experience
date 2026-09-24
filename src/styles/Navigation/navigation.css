@@ -1,0 +1,1529 @@
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
+
+.site-navigation {
+
+  position: fixed;
+
+  top: 24px;
+
+  left: 50%;
+
+  z-index: 1000;
+
+  width: calc(100% - 48px);
+
+  max-width: 1440px;
+
+  transform: translateX(-50%);
+
+  pointer-events: none;
+
+  transition:
+    top 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+/* ============================================================
+   CONTENEDOR
+   ============================================================ */
+
+.site-navigation-inner {
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  width: 100%;
+
+  min-height: 64px;
+
+  padding: 0 10px;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.09);
+
+  border-radius: 999px;
+
+  background:
+    rgba(8, 10, 12, 0.16);
+
+  box-shadow:
+    0 14px 42px
+      rgba(0, 0, 0, 0.18);
+
+  backdrop-filter:
+    blur(18px)
+    saturate(120%);
+
+  -webkit-backdrop-filter:
+    blur(18px)
+    saturate(120%);
+
+  pointer-events: none;
+
+  overflow: visible;
+
+  transition:
+    min-height 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    padding 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    background 0.45s ease,
+    box-shadow 0.45s ease,
+    border-color 0.45s ease;
+}
+
+
+/* ============================================================
+   REFLEJO NARANJA DE LA CÁPSULA
+   ============================================================ */
+
+.site-navigation-inner::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  border-radius: inherit;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent 5%,
+      rgba(255, 75, 31, 0.20) 50%,
+      transparent 95%
+    );
+
+  filter: blur(16px);
+
+  opacity: 0.9;
+
+  pointer-events: none;
+
+  z-index: 0;
+
+  transition:
+    opacity 0.5s ease,
+    filter 0.5s ease;
+}
+
+
+/* ============================================================
+   LOGO
+   ============================================================ */
+
+.site-navigation-logo {
+
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  flex-shrink: 0;
+
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #ffffff;
+
+  cursor: pointer;
+
+  pointer-events: auto;
+
+  font: inherit;
+
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+
+.site-navigation-logo-mark {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 38px;
+
+  height: 38px;
+
+  flex-shrink: 0;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.24);
+
+  border-radius: 50%;
+
+  background:
+    rgba(255, 255, 255, 0.035);
+
+  color: #ffffff;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.08em;
+
+  backdrop-filter: blur(12px);
+
+  -webkit-backdrop-filter: blur(12px);
+
+  transition:
+    width 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    height 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.site-navigation-logo-name {
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.24em;
+
+  color:
+    rgba(255, 255, 255, 0.9);
+
+  white-space: nowrap;
+
+  transition:
+    opacity 0.35s ease,
+    width 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.35s ease;
+}
+
+
+.site-navigation-logo:hover
+.site-navigation-logo-mark {
+
+  border-color:
+    rgba(255, 255, 255, 0.42);
+
+  background:
+    rgba(255, 255, 255, 0.08);
+
+  transform: scale(1.04);
+}
+
+
+/* ============================================================
+   LINKS
+   ============================================================ */
+
+.site-navigation-links {
+
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 4px;
+
+  min-height: 48px;
+
+  flex: 1;
+
+  pointer-events: auto;
+
+  transition:
+    gap 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+/* ============================================================
+   LINK BASE
+   ============================================================ */
+
+.site-navigation-link {
+
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex: 0 1 auto;
+
+  width: auto;
+
+  min-width: 82px;
+
+  height: 42px;
+
+  padding: 0 15px;
+
+  border: 0;
+
+  border-radius: 999px;
+
+  background: transparent;
+
+  color:
+    rgba(255, 255, 255, 0.62);
+
+  cursor: pointer;
+
+  pointer-events: auto;
+
+  font: inherit;
+
+  transition:
+    color 0.12s ease,
+    background 0.12s ease,
+    transform 0.18s ease,
+    width 0.18s ease,
+    min-width 0.18s ease,
+    flex-basis 0.18s ease,
+    padding 0.18s ease;
+}
+
+
+.site-navigation-link:hover {
+
+  color: #ffffff;
+}
+
+
+.site-navigation-link-number {
+
+  display: none;
+}
+
+
+.site-navigation-link-label {
+
+  position: relative;
+
+  white-space: nowrap;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.14em;
+
+  transition:
+    opacity 0.12s ease,
+    transform 0.12s ease;
+}
+
+
+.site-navigation-link-dot {
+
+  position: absolute;
+
+  top: 50%;
+
+  left: 50%;
+
+  width: 4px;
+
+  height: 4px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(255, 255, 255, 0.62);
+
+  opacity: 0;
+
+  transform:
+    translate(-50%, -50%)
+    scale(0.7);
+
+  transition:
+    opacity 0.12s ease,
+    transform 0.12s ease,
+    background 0.12s ease;
+}
+
+
+/* ============================================================
+   ACTIVE — MODO NORMAL
+   ============================================================ */
+
+.site-navigation-link.is-active {
+
+  color: #ffffff;
+}
+
+
+.site-navigation-link.is-active::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  border-radius: 999px;
+
+  background:
+    rgba(255, 255, 255, 0.035);
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.06);
+
+  pointer-events: none;
+}
+
+
+/* ============================================================
+   COMPACT
+   ============================================================ */
+
+.site-navigation-compact {
+
+  top: 14px;
+
+  width: max-content;
+
+  max-width: calc(100% - 32px);
+
+  transition:
+    top 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+.site-navigation-compact
+.site-navigation-inner {
+
+  justify-content: center;
+
+  width: max-content;
+
+  min-height: 44px;
+
+  padding: 0 7px 0 9px;
+
+  pointer-events: auto;
+
+  transition:
+    min-height 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    padding 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    width 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+/* ============================================================
+   LOGO COMPACTO
+   ============================================================ */
+
+.site-navigation-compact
+.site-navigation-logo {
+
+  gap: 0;
+
+  transition:
+    transform 0.18s ease;
+}
+
+
+.site-navigation-compact
+.site-navigation-logo-name {
+
+  opacity: 0;
+
+  width: 0;
+
+  overflow: hidden;
+
+  transform: translateX(-8px);
+
+  transition:
+    opacity 0.18s ease,
+    width 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.18s ease;
+}
+
+
+.site-navigation-compact
+.site-navigation-logo-mark {
+
+  width: 34px;
+
+  height: 34px;
+}
+
+
+/* ============================================================
+   MP — EXPANSIÓN DEL MENÚ
+   ============================================================ */
+
+.site-navigation-compact
+.site-navigation-inner:has(
+  .site-navigation-link.is-hovered
+)
+.site-navigation-logo {
+
+  transform:
+    translateX(-40px);
+}
+
+
+/* ============================================================
+   LINKS COMPACTOS
+   ============================================================ */
+
+.site-navigation-compact
+.site-navigation-links {
+
+  flex: 0 0 auto;
+
+  gap: 2px;
+
+  min-height: 38px;
+
+  transition:
+    gap 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+.site-navigation-compact
+.site-navigation-link {
+
+  flex: 0 0 27px;
+
+  width: 27px;
+
+  min-width: 27px;
+
+  height: 38px;
+
+  padding: 0;
+
+  color:
+    rgba(255, 255, 255, 0.42);
+
+  transition:
+    color 0.12s ease,
+    background 0.12s ease,
+    transform 0.16s ease,
+    width 0.16s ease,
+    min-width 0.16s ease,
+    flex-basis 0.16s ease,
+    padding 0.16s ease;
+}
+
+
+/* ============================================================
+   PUNTO COMPACTO
+   ============================================================ */
+
+.site-navigation-compact
+.site-navigation-link-dot {
+
+  width: 4px;
+
+  height: 4px;
+
+  background:
+    rgba(255, 255, 255, 0.42);
+
+  opacity: 1;
+
+  transform:
+    translate(-50%, -50%)
+    scale(1);
+
+  transition:
+    opacity 0.12s ease,
+    transform 0.12s ease,
+    background 0.12s ease;
+}
+
+
+.site-navigation-compact
+.site-navigation-link:hover
+.site-navigation-link-dot {
+
+  background:
+    rgba(255, 255, 255, 0.9);
+}
+
+
+/* ============================================================
+   LABEL COMPACTO
+   ============================================================ */
+
+.site-navigation-compact
+.site-navigation-link-label {
+
+  position: absolute;
+
+  top: 50%;
+
+  left: 50%;
+
+  width: max-content;
+
+  transform:
+    translate(-50%, -50%);
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.13em;
+
+  color:
+    rgba(255, 255, 255, 0.9);
+
+  z-index: 3;
+
+  transition:
+    opacity 0.12s ease,
+    transform 0.12s ease;
+}
+
+
+/* ============================================================
+   ACTIVE COMPACTO
+   ============================================================ */
+
+.site-navigation-compact
+.site-navigation-link.is-active {
+
+  flex-basis: 108px;
+
+  width: 108px;
+
+  color: #ffffff;
+
+  z-index: 4;
+}
+
+
+.site-navigation-compact
+.site-navigation-link.is-active::before {
+
+  inset: 2px;
+
+  background:
+    rgba(255, 255, 255, 0.025);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.055);
+}
+
+
+.site-navigation-compact
+.site-navigation-link.is-active
+.site-navigation-link-label {
+
+  opacity: 1;
+
+  transform:
+    translate(-50%, -50%);
+}
+
+
+.site-navigation-compact
+.site-navigation-link.is-active
+.site-navigation-link-dot {
+
+  opacity: 0;
+}
+
+
+/* ============================================================
+   HOVER
+   ============================================================ */
+
+.site-navigation-compact
+.site-navigation-links:has(
+  .site-navigation-link.is-hovered
+)
+.site-navigation-link.is-active {
+
+  flex-basis: 27px;
+
+  width: 27px;
+
+  color:
+    rgba(255, 255, 255, 0.42);
+}
+
+
+.site-navigation-compact
+.site-navigation-links:has(
+  .site-navigation-link.is-hovered
+)
+.site-navigation-link.is-active::before {
+
+  background: transparent;
+
+  border-color: transparent;
+}
+
+
+.site-navigation-compact
+.site-navigation-links:has(
+  .site-navigation-link.is-hovered
+)
+.site-navigation-link.is-active
+.site-navigation-link-label {
+
+  opacity: 0;
+
+  transform:
+    translate(-50%, -50%)
+    scale(0.8);
+}
+
+
+.site-navigation-compact
+.site-navigation-links:has(
+  .site-navigation-link.is-hovered
+)
+.site-navigation-link.is-active
+.site-navigation-link-dot {
+
+  opacity: 1;
+
+  transform:
+    translate(-50%, -50%)
+    scale(1);
+}
+
+
+/* ============================================================
+   ITEM HOVERED
+   ============================================================ */
+
+.site-navigation-compact
+.site-navigation-link.is-hovered {
+
+  flex-basis: 108px;
+
+  width: 108px;
+
+  color: #ffffff;
+
+  z-index: 6;
+}
+
+
+.site-navigation-compact
+.site-navigation-link.is-hovered::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 2px;
+
+  border-radius: 999px;
+
+  background:
+    rgba(255, 255, 255, 0.035);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.075);
+
+  box-shadow:
+    inset 0 1px 0
+      rgba(255, 255, 255, 0.035);
+
+  pointer-events: none;
+}
+
+
+.site-navigation-compact
+.site-navigation-link.is-hovered
+.site-navigation-link-label {
+
+  opacity: 1;
+
+  transform:
+    translate(-50%, -50%);
+}
+
+
+.site-navigation-compact
+.site-navigation-link.is-hovered
+.site-navigation-link-dot {
+
+  opacity: 0;
+}
+
+
+/* ============================================================
+   ESPACIO FÍSICO PARA EL LABEL
+   ============================================================ */
+
+.site-navigation-compact
+.site-navigation-link.is-before-hover {
+
+  transform:
+    translateX(-40px);
+}
+
+
+.site-navigation-compact
+.site-navigation-link.is-after-hover {
+
+  transform:
+    translateX(40px);
+}
+
+
+/* ============================================================
+   CTA
+   ============================================================ */
+
+.site-navigation-cta {
+
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  flex-shrink: 0;
+
+  min-width: 158px;
+
+  height: 42px;
+
+  margin-left: 10px;
+
+  padding: 0 17px;
+
+  border: 0;
+
+  border-radius: 999px;
+
+  background:
+    #ff4b1f;
+
+  color: #ffffff;
+
+  cursor: pointer;
+
+  pointer-events: auto;
+
+  font: inherit;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+
+  box-shadow:
+    0 10px 30px
+      rgba(255, 75, 31, 0.18);
+
+  transition:
+    background 0.2s ease,
+    transform 0.18s ease,
+    box-shadow 0.2s ease,
+    min-width 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    height 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    margin-left 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    padding 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+.site-navigation-cta:hover {
+
+  background:
+    #ff5a29;
+
+  transform:
+    translateY(-1px);
+
+  box-shadow:
+    0 14px 36px
+      rgba(255, 75, 31, 0.26);
+}
+
+
+.site-navigation-cta-arrow {
+
+  font-size: 15px;
+
+  line-height: 1;
+
+  transition:
+    transform 0.18s ease;
+}
+
+
+.site-navigation-cta:hover
+.site-navigation-cta-arrow {
+
+  transform:
+    translate(2px, -2px);
+}
+
+
+/* ============================================================
+   COMPACT CTA
+   ============================================================ */
+
+.site-navigation-compact
+.site-navigation-cta {
+
+  min-width: 122px;
+
+  height: 34px;
+
+  margin-left: 6px;
+
+  padding: 0 13px;
+
+  font-size: 8px;
+}
+
+
+.site-navigation-compact
+.site-navigation-cta-arrow {
+
+  font-size: 13px;
+}
+
+
+/* ============================================================
+   CTA — EXPANSIÓN DEL MENÚ
+   ============================================================ */
+
+.site-navigation-compact
+.site-navigation-inner:has(
+  .site-navigation-link.is-hovered
+)
+.site-navigation-cta {
+
+  transform:
+    translateX(40px);
+}
+
+
+.site-navigation-compact
+.site-navigation-inner:has(
+  .site-navigation-link.is-hovered
+)
+.site-navigation-cta:hover {
+
+  transform:
+    translateX(40px)
+    translateY(-1px);
+}
+
+
+/* ============================================================
+   MOBILE TOGGLE
+   ============================================================ */
+
+.site-navigation-mobile-toggle {
+
+  display: none;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-direction: column;
+
+  gap: 5px;
+
+  flex-shrink: 0;
+
+  width: 42px;
+
+  height: 42px;
+
+  padding: 0;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.16);
+
+  border-radius: 50%;
+
+  background:
+    rgba(255, 255, 255, 0.035);
+
+  pointer-events: auto;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.18s ease;
+}
+
+
+.site-navigation-mobile-toggle:hover {
+
+  background:
+    rgba(255, 255, 255, 0.08);
+
+  border-color:
+    rgba(255, 255, 255, 0.28);
+}
+
+
+.site-navigation-mobile-toggle span {
+
+  display: block;
+
+  width: 15px;
+
+  height: 1px;
+
+  margin: 0;
+
+  background:
+    rgba(255, 255, 255, 0.85);
+
+  transform-origin: center;
+
+  transition:
+    transform 0.2s ease,
+    opacity 0.15s ease;
+}
+
+
+.site-navigation-mobile-toggle.is-open
+span:first-child {
+
+  transform:
+    translateY(3px)
+    rotate(45deg);
+}
+
+
+.site-navigation-mobile-toggle.is-open
+span:last-child {
+
+  transform:
+    translateY(-3px)
+    rotate(-45deg);
+}
+
+
+/* ============================================================
+   MENÚ MÓVIL
+   ============================================================ */
+
+.site-navigation-mobile-menu {
+
+  display: none;
+
+  position: relative;
+
+  width: 100%;
+
+  max-width: 100%;
+
+  box-sizing: border-box;
+
+  margin-top: 8px;
+
+  padding: 8px;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.09);
+
+  border-radius: 24px;
+
+  background:
+    rgba(8, 10, 12, 0.88);
+
+  box-shadow:
+    0 18px 50px
+      rgba(0, 0, 0, 0.35);
+
+  backdrop-filter:
+    blur(20px)
+    saturate(125%);
+
+  -webkit-backdrop-filter:
+    blur(20px)
+    saturate(125%);
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  pointer-events: none;
+
+  transform:
+    translateY(-10px)
+    scale(0.98);
+
+  transform-origin:
+    top center;
+
+  transition:
+    opacity 0.2s ease,
+    visibility 0.2s ease,
+    transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+.site-navigation-mobile-menu::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  border-radius: inherit;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 75, 31, 0.12),
+      transparent 35%
+    );
+
+  pointer-events: none;
+}
+
+
+.site-navigation-mobile-menu.is-open {
+
+  opacity: 1;
+
+  visibility: visible;
+
+  pointer-events: auto;
+
+  transform:
+    translateY(0)
+    scale(1);
+}
+
+
+/* ============================================================
+   LINK MÓVIL
+   ============================================================ */
+
+.site-navigation-mobile-link {
+
+  position: relative;
+
+  z-index: 1;
+
+  display: flex;
+
+  align-items: center;
+
+  width: 100%;
+
+  min-height: 54px;
+
+  box-sizing: border-box;
+
+  padding:
+    0 14px;
+
+  border: 0;
+
+  border-bottom: 1px solid
+    rgba(255, 255, 255, 0.07);
+
+  border-radius: 14px;
+
+  background: transparent;
+
+  color:
+    rgba(255, 255, 255, 0.62);
+
+  cursor: pointer;
+
+  text-align: left;
+
+  font: inherit;
+
+  transition:
+    background 0.12s ease,
+    color 0.12s ease,
+    padding 0.12s ease;
+}
+
+
+.site-navigation-mobile-link:last-of-type {
+
+  border-bottom: 0;
+}
+
+
+.site-navigation-mobile-link:hover {
+
+  color: #ffffff;
+
+  background:
+    rgba(255, 255, 255, 0.045);
+
+  padding-left: 18px;
+}
+
+
+.site-navigation-mobile-link.is-active {
+
+  color: #ffffff;
+
+  background:
+    rgba(255, 255, 255, 0.055);
+}
+
+
+.site-navigation-mobile-number {
+
+  width: 32px;
+
+  flex-shrink: 0;
+
+  color:
+    rgba(255, 255, 255, 0.35);
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
+}
+
+
+.site-navigation-mobile-link.is-active
+.site-navigation-mobile-number {
+
+  color:
+    #ff4b1f;
+}
+
+
+.site-navigation-mobile-label {
+
+  min-width: 0;
+
+  flex: 1;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.14em;
+
+  white-space: nowrap;
+}
+
+
+.site-navigation-mobile-arrow {
+
+  flex-shrink: 0;
+
+  font-size: 15px;
+
+  opacity: 0.45;
+
+  transition:
+    opacity 0.12s ease,
+    transform 0.12s ease;
+}
+
+
+.site-navigation-mobile-link:hover
+.site-navigation-mobile-arrow {
+
+  opacity: 1;
+
+  transform:
+    translate(2px, -2px);
+}
+
+
+/* ============================================================
+   CTA MÓVIL
+   ============================================================ */
+
+.site-navigation-mobile-start {
+
+  position: relative;
+
+  z-index: 1;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  width: 100%;
+
+  min-height: 48px;
+
+  box-sizing: border-box;
+
+  margin-top: 8px;
+
+  padding:
+    0 16px;
+
+  border: 0;
+
+  border-radius: 14px;
+
+  background:
+    #ff4b1f;
+
+  color: #ffffff;
+
+  cursor: pointer;
+
+  font: inherit;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.1em;
+
+  box-shadow:
+    0 10px 30px
+      rgba(255, 75, 31, 0.18);
+
+  transition:
+    background 0.2s ease,
+    transform 0.18s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.site-navigation-mobile-start:hover {
+
+  background:
+    #ff5a29;
+
+  transform:
+    translateY(-1px);
+
+  box-shadow:
+    0 14px 36px
+      rgba(255, 75, 31, 0.26);
+}
+
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 900px) {
+
+  .site-navigation {
+
+    width: calc(100% - 32px);
+
+    top: 16px;
+  }
+
+
+  .site-navigation-link {
+
+    min-width: 72px;
+
+    padding:
+      0 11px;
+  }
+
+
+  .site-navigation-cta {
+
+    min-width: 138px;
+  }
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 680px) {
+
+  .site-navigation {
+
+    top: 12px;
+
+    width: calc(100% - 24px);
+
+    max-width: calc(100% - 24px);
+
+    box-sizing: border-box;
+  }
+
+
+  .site-navigation-inner {
+
+    box-sizing: border-box;
+
+    min-height: 56px;
+
+    padding:
+      0 7px 0 10px;
+
+    overflow: hidden;
+  }
+
+
+  .site-navigation-logo-name {
+
+    display: none;
+  }
+
+
+  .site-navigation-logo-mark {
+
+    width: 36px;
+
+    height: 36px;
+  }
+
+
+  .site-navigation-links {
+
+    display: none;
+  }
+
+
+  .site-navigation-cta {
+
+    display: none;
+  }
+
+
+  .site-navigation-mobile-toggle {
+
+    display: flex;
+  }
+
+
+  .site-navigation-mobile-menu {
+
+    display: flex;
+
+    flex-direction: column;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+  }
+
+
+  .site-navigation-compact {
+
+    top: 10px;
+
+    width: calc(100% - 24px);
+
+    max-width: calc(100% - 24px);
+  }
+
+
+  .site-navigation-compact
+  .site-navigation-inner {
+
+    width: 100%;
+
+    min-height: 48px;
+
+    padding:
+      0 6px 0 8px;
+
+    margin-left: 0;
+
+    justify-content: space-between;
+
+    box-sizing: border-box;
+  }
+
+
+  .site-navigation-compact
+  .site-navigation-logo-mark {
+
+    width: 32px;
+
+    height: 32px;
+  }
+
+
+  .site-navigation-compact
+  .site-navigation-mobile-toggle {
+
+    display: flex;
+  }
+
+
+  .site-navigation-mobile-open
+  .site-navigation-inner {
+
+    border-radius: 20px;
+
+    overflow: hidden;
+  }
+}
+
+
+/* ============================================================
+   REDUCCIÓN DE MOVIMIENTO
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .site-navigation,
+  .site-navigation *,
+  .site-navigation *::before,
+  .site-navigation *::after {
+
+    transition-duration:
+      0.01ms !important;
+
+    animation-duration:
+      0.01ms !important;
+  }
+}

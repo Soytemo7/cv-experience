@@ -1,0 +1,834 @@
+/* ============================================================
+   CONTACT — TECHNOLOGY MARQUEE
+   Animación de tecnologías
+   ============================================================ */
+
+.contact-tech-marquee {
+  --tech-text: #f1f3f4;
+
+  --tech-muted:
+    rgba(
+      255,
+      255,
+      255,
+      0.38
+    );
+
+  --tech-line:
+    rgba(
+      255,
+      255,
+      255,
+      0.10
+    );
+
+  --tech-surface:
+    rgba(
+      255,
+      255,
+      255,
+      0.025
+    );
+
+  --tech-border:
+    rgba(
+      255,
+      255,
+      255,
+      0.10
+    );
+
+  position: relative;
+
+  width: 100%;
+
+  padding-top: 30px;
+
+  overflow: hidden;
+}
+
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+.contact-tech-header {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  width: 100%;
+
+  margin-bottom: 28px;
+}
+
+
+.contact-tech-line {
+  position: relative;
+
+  flex: 1;
+
+  height: 1px;
+
+  overflow: hidden;
+
+  background:
+    var(--tech-line);
+}
+
+
+.contact-tech-line::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  transform:
+    translateX(-100%);
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,255,255,0.35),
+      transparent
+    );
+
+  animation:
+    contact-tech-line-scan
+    4s
+    ease-in-out
+    infinite;
+}
+
+
+.contact-tech-label {
+  flex-shrink: 0;
+
+  font-size: 7px;
+
+  line-height: 1;
+
+  letter-spacing: 0.24em;
+
+  text-transform: uppercase;
+
+  color:
+    var(--tech-muted);
+}
+
+
+/* ============================================================
+   VIEWPORT
+   ============================================================ */
+
+.contact-tech-viewport {
+  position: relative;
+
+  width: 100%;
+
+  overflow: hidden;
+
+  padding:
+    15px 0 35px;
+}
+
+
+/* ============================================================
+   TRACK
+   ============================================================ */
+
+.contact-tech-track {
+  display: flex;
+
+  align-items: center;
+
+  width: max-content;
+
+  animation:
+    contactTechMarquee
+    38s
+    linear
+    infinite;
+
+  will-change:
+    transform;
+}
+
+
+.contact-tech-marquee:hover
+  .contact-tech-track {
+  animation-play-state:
+    paused;
+}
+
+
+/* ============================================================
+   ITEM
+   ============================================================ */
+
+.contact-tech-item {
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 158px;
+  height: 168px;
+
+  flex-shrink: 0;
+
+  margin-right: 18px;
+
+  cursor: default;
+
+  transition:
+    transform 0.5s
+      cubic-bezier(
+        0.22,
+        1,
+        0.36,
+        1
+      );
+}
+
+
+.contact-tech-item:hover {
+  transform:
+    translateY(-10px)
+    scale(1.04);
+}
+
+
+/* ============================================================
+   SUPERFICIE GLASS
+   ============================================================ */
+
+.contact-tech-item::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  border:
+    1px solid
+    var(--tech-border);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,0.045),
+      rgba(255,255,255,0.012)
+    );
+
+  box-shadow:
+    inset 0 1px 0
+      rgba(255,255,255,0.045);
+
+  opacity: 0.75;
+
+  pointer-events: none;
+
+  transition:
+    border-color 0.45s ease,
+    background-color 0.45s ease,
+    box-shadow 0.45s ease;
+}
+
+
+.contact-tech-item::after {
+  content: "";
+
+  position: absolute;
+
+  left: 10%;
+  right: 10%;
+
+  top: 0;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,255,255,0.22),
+      transparent
+    );
+
+  opacity: 0.6;
+
+  pointer-events: none;
+}
+
+
+.contact-tech-item:hover::before {
+  border-color:
+    rgba(255,255,255,0.20);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,0.065),
+      rgba(255,255,255,0.018)
+    );
+
+  box-shadow:
+    inset 0 1px 0
+      rgba(255,255,255,0.08),
+
+    0 18px 45px
+      rgba(0,0,0,0.18);
+}
+
+
+/* ============================================================
+   ICONO
+   ============================================================ */
+
+.contact-tech-icon {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 94px;
+  height: 94px;
+
+  margin-bottom: 14px;
+
+  isolation: isolate;
+}
+
+
+/* ============================================================
+   GLOW PRINCIPAL
+   ============================================================ */
+
+.contact-tech-glow {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 72px;
+  height: 72px;
+
+  transform:
+    translate(
+      -50%,
+      -50%
+    );
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255,255,255,0.10),
+      rgba(255,255,255,0.035) 38%,
+      transparent 72%
+    );
+
+  filter:
+    blur(9px);
+
+  z-index: -2;
+
+  opacity: 0.65;
+
+  transition:
+    transform 0.6s ease,
+    opacity 0.6s ease;
+}
+
+
+.contact-tech-item:hover
+  .contact-tech-glow {
+  transform:
+    translate(
+      -50%,
+      -50%
+    )
+    scale(1.35);
+
+  opacity: 1;
+}
+
+
+/* ============================================================
+   ÓRBITA
+   ============================================================ */
+
+.contact-tech-orbit {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 82px;
+  height: 82px;
+
+  transform:
+    translate(
+      -50%,
+      -50%
+    )
+    rotate(0deg);
+
+  border:
+    1px solid
+    rgba(255,255,255,0.07);
+
+  border-radius: 50%;
+
+  z-index: -1;
+
+  animation:
+    contactTechOrbit
+    9s
+    linear
+    infinite;
+}
+
+
+.contact-tech-orbit::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 7px;
+
+  border:
+    1px dashed
+    rgba(255,255,255,0.07);
+
+  border-radius: 50%;
+}
+
+
+.contact-tech-orbit::after {
+  content: "";
+
+  position: absolute;
+
+  top: -2px;
+  left: 50%;
+
+  width: 4px;
+  height: 4px;
+
+  margin-left: -2px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(255,255,255,0.42);
+
+  box-shadow:
+    0 0 9px
+    rgba(255,255,255,0.22);
+}
+
+
+/* ============================================================
+   DEVICON
+   ============================================================ */
+
+.contact-tech-icon i {
+  position: relative;
+
+  z-index: 2;
+
+  display: block;
+
+  font-size: 76px;
+
+  line-height: 1;
+
+  filter:
+    drop-shadow(
+      0 8px 20px
+      rgba(0,0,0,0.30)
+    );
+
+  transition:
+    transform 0.55s
+      cubic-bezier(
+        0.22,
+        1,
+        0.36,
+        1
+      ),
+    filter 0.55s ease;
+}
+
+
+.contact-tech-item:hover
+  .contact-tech-icon i {
+  transform:
+    scale(1.08);
+
+  filter:
+    drop-shadow(
+      0 10px 25px
+      rgba(0,0,0,0.40)
+    );
+}
+
+
+/* ============================================================
+   REFLEJO
+   ============================================================ */
+
+.contact-tech-shine {
+  position: absolute;
+
+  top: -15%;
+
+  left: -65%;
+
+  width: 35%;
+  height: 135%;
+
+  transform:
+    rotate(18deg);
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,255,255,0.20),
+      transparent
+    );
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  z-index: 4;
+}
+
+
+.contact-tech-item:hover
+  .contact-tech-shine {
+  animation:
+    contactTechShine
+    0.9s
+    cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    )
+    forwards;
+}
+
+
+/* ============================================================
+   NOMBRE
+   ============================================================ */
+
+.contact-tech-name {
+  position: relative;
+
+  z-index: 3;
+
+  font-size: 8px;
+
+  line-height: 1;
+
+  font-weight: 500;
+
+  letter-spacing: 0.16em;
+
+  text-transform: uppercase;
+
+  color:
+    var(--tech-muted);
+
+  transition:
+    color 0.35s ease,
+    transform 0.35s ease;
+}
+
+
+.contact-tech-item:hover
+  .contact-tech-name {
+  color:
+    var(--tech-text);
+
+  transform:
+    translateY(2px);
+}
+
+
+/* ============================================================
+   FADE
+   ============================================================ */
+
+.contact-tech-fade {
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+
+  width: 150px;
+
+  z-index: 10;
+
+  pointer-events: none;
+}
+
+
+.contact-tech-fade-left {
+  left: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      #080a0c,
+      rgba(8,10,12,0.85),
+      transparent
+    );
+}
+
+
+.contact-tech-fade-right {
+  right: 0;
+
+  background:
+    linear-gradient(
+      270deg,
+      #080a0c,
+      rgba(8,10,12,0.85),
+      transparent
+    );
+}
+
+
+/* ============================================================
+   ANIMACIONES
+   ============================================================ */
+
+@keyframes contactTechMarquee {
+
+  from {
+    transform:
+      translateX(0);
+  }
+
+  to {
+    transform:
+      translateX(-50%);
+  }
+
+}
+
+
+@keyframes contactTechOrbit {
+
+  from {
+    transform:
+      translate(
+        -50%,
+        -50%
+      )
+      rotate(0deg);
+  }
+
+  to {
+    transform:
+      translate(
+        -50%,
+        -50%
+      )
+      rotate(360deg);
+  }
+
+}
+
+
+@keyframes contactTechShine {
+
+  0% {
+    left: -65%;
+
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  100% {
+    left: 130%;
+
+    opacity: 0;
+  }
+
+}
+
+
+@keyframes contact-tech-line-scan {
+
+  0% {
+    transform:
+      translateX(-110%);
+  }
+
+  48%,
+  100% {
+    transform:
+      translateX(110%);
+  }
+
+}
+
+
+/* ============================================================
+   MÓVIL
+   ============================================================ */
+
+@media (
+  max-width: 768px
+) {
+
+  .contact-tech-marquee {
+    padding-top: 25px;
+  }
+
+
+  .contact-tech-header {
+    margin-bottom: 22px;
+  }
+
+
+  .contact-tech-fade {
+    width: 70px;
+  }
+
+
+  .contact-tech-item {
+    width: 140px;
+    height: 155px;
+
+    margin-right: 14px;
+  }
+
+
+  .contact-tech-icon {
+    width: 84px;
+    height: 84px;
+  }
+
+
+  .contact-tech-icon i {
+    font-size: 68px;
+  }
+
+
+  .contact-tech-orbit {
+    width: 74px;
+    height: 74px;
+  }
+
+
+  .contact-tech-glow {
+    width: 65px;
+    height: 65px;
+  }
+
+}
+
+
+/* ============================================================
+   MÓVIL PEQUEÑO
+   ============================================================ */
+
+@media (
+  max-width: 420px
+) {
+
+  .contact-tech-label {
+    font-size: 6px;
+
+    letter-spacing: 0.18em;
+  }
+
+
+  .contact-tech-fade {
+    width: 45px;
+  }
+
+
+  .contact-tech-item {
+    width: 125px;
+    height: 145px;
+
+    margin-right: 12px;
+  }
+
+
+  .contact-tech-icon {
+    width: 78px;
+    height: 78px;
+
+    margin-bottom: 12px;
+  }
+
+
+  .contact-tech-icon i {
+    font-size: 62px;
+  }
+
+
+  .contact-tech-orbit {
+    width: 69px;
+    height: 69px;
+  }
+
+
+  .contact-tech-glow {
+    width: 60px;
+    height: 60px;
+  }
+
+
+  .contact-tech-name {
+    font-size: 7px;
+
+    letter-spacing: 0.12em;
+  }
+
+}
+
+
+/* ============================================================
+   REDUCIR MOVIMIENTO
+   ============================================================ */
+
+@media (
+  prefers-reduced-motion: reduce
+) {
+
+  .contact-tech-track,
+  .contact-tech-orbit,
+  .contact-tech-shine,
+  .contact-tech-line::after {
+    animation: none;
+  }
+
+}

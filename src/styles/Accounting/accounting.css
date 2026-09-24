@@ -1,0 +1,1018 @@
+/* ============================================================
+   ACCOUNTING / EXPERIENCE
+   Sistema profesional — Contador + Abogado
+   ============================================================ */
+
+.accounting {
+  position: relative;
+
+  width: 100%;
+  height: 500vh;
+
+  background: #020304;
+
+  overflow: clip;
+}
+
+
+/* ============================================================
+   STICKY
+   ============================================================ */
+
+.accounting-sticky {
+  position: sticky;
+
+  top: 0;
+
+  width: 100%;
+  height: 100vh;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at center,
+      #12181d 0%,
+      #070b0f 48%,
+      #020304 100%
+    );
+}
+
+
+/* ============================================================
+   CANVAS
+   ============================================================ */
+
+.accounting-canvas {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: block;
+}
+
+
+/* ============================================================
+   UI
+   ============================================================ */
+
+.accounting-ui {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 5;
+
+  pointer-events: none;
+
+  color: #edf1f3;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+}
+
+
+/* ============================================================
+   CHAPTER
+   ============================================================ */
+
+.accounting-chapter {
+  position: absolute;
+
+  top: 44px;
+  left: 48px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  color: rgba(
+    225,
+    233,
+    238,
+    0.72
+  );
+
+  font-size: 12px;
+  font-weight: 600;
+
+  letter-spacing: 0.2em;
+
+  text-transform: uppercase;
+
+  will-change:
+    transform,
+    opacity;
+}
+
+.accounting-chapter span {
+  color: rgba(
+    205,
+    220,
+    230,
+    0.38
+  );
+}
+
+.accounting-chapter i {
+  width: 55px;
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(
+        215,
+        225,
+        232,
+        0.48
+      ),
+      transparent
+    );
+}
+
+.accounting-chapter strong {
+  font-weight: 600;
+}
+
+
+/* ============================================================
+   INTRO
+   ============================================================ */
+
+.accounting-intro {
+  position: absolute;
+
+  top: 42px;
+  right: 48px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-end;
+
+  gap: 5px;
+
+  text-align: right;
+
+  will-change:
+    transform,
+    opacity;
+}
+
+.accounting-intro span {
+  color: rgba(
+    210,
+    222,
+    230,
+    0.34
+  );
+
+  font-size: 9px;
+
+  letter-spacing: 0.25em;
+}
+
+.accounting-intro strong {
+  color: rgba(
+    232,
+    238,
+    242,
+    0.7
+  );
+
+  font-size: 15px;
+
+  letter-spacing: 0.16em;
+}
+
+.accounting-intro small {
+  color: rgba(
+    205,
+    220,
+    228,
+    0.36
+  );
+
+  font-size: 9px;
+
+  letter-spacing: 0.16em;
+}
+
+
+/* ============================================================
+   HERO
+   ============================================================ */
+
+.accounting-hero {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: min(
+    1100px,
+    calc(100% - 80px)
+  );
+
+  transform:
+    translate(
+      -50%,
+      -50%
+    );
+
+  text-align: center;
+
+  will-change:
+    transform,
+    opacity;
+}
+
+.accounting-hero > span {
+  display: block;
+
+  margin-bottom: 20px;
+
+  color: rgba(
+    210,
+    223,
+    231,
+    0.4
+  );
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 0.32em;
+
+  text-transform: uppercase;
+}
+
+.accounting-hero h2 {
+  margin: 0;
+
+  color: rgba(
+    241,
+    244,
+    245,
+    0.94
+  );
+
+  font-size: clamp(
+    58px,
+    9.4vw,
+    154px
+  );
+
+  font-weight: 600;
+
+  line-height: 0.84;
+
+  letter-spacing: -0.075em;
+}
+
+.accounting-hero h2 em {
+  display: inline-block;
+
+  margin:
+    0 0.08em;
+
+  color: rgba(
+    190,
+    207,
+    217,
+    0.28
+  );
+
+  font-style: normal;
+
+  transform:
+    scaleX(0.65);
+}
+
+.accounting-hero p {
+  margin: 30px 0 0;
+
+  color: rgba(
+    215,
+    225,
+    231,
+    0.52
+  );
+
+  font-size: 12px;
+  line-height: 1.8;
+
+  letter-spacing: 0.2em;
+
+  text-transform: uppercase;
+}
+
+
+/* ============================================================
+   PROFESSIONAL SYSTEMS
+   ============================================================ */
+
+.accounting-system {
+  position: absolute;
+
+  top: 26%;
+
+  width: 330px;
+
+  will-change:
+    transform,
+    opacity;
+}
+
+.accounting-system-left {
+  left: 7%;
+
+  text-align: left;
+}
+
+.accounting-system-right {
+  right: 7%;
+
+  text-align: right;
+}
+
+.accounting-system-label {
+  color: rgba(
+    205,
+    220,
+    229,
+    0.42
+  );
+
+  font-size: 10px;
+
+  letter-spacing: 0.24em;
+
+  transform:
+    translateY(25px);
+
+  opacity: 0;
+}
+
+.accounting-system-value {
+  margin-top: 12px;
+
+  color: rgba(
+    237,
+    242,
+    244,
+    0.9
+  );
+
+  font-size: clamp(
+    26px,
+    3vw,
+    44px
+  );
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: -0.04em;
+
+  transform:
+    translateY(30px);
+
+  opacity: 0;
+}
+
+.accounting-system p {
+  margin: 15px 0 0;
+
+  color: rgba(
+    205,
+    220,
+    228,
+    0.5
+  );
+
+  font-size: 11px;
+
+  line-height: 1.8;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+}
+
+
+/* ============================================================
+   EXPERIENCE
+   ============================================================ */
+
+.accounting-experience {
+  position: absolute;
+
+  left: 50%;
+  bottom: 11%;
+
+  width: min(
+    900px,
+    calc(100% - 80px)
+  );
+
+  transform:
+    translate(
+      -50%,
+      35px
+    );
+
+  opacity: 0;
+
+  text-align: center;
+
+  will-change:
+    transform,
+    opacity;
+}
+
+.accounting-experience > span {
+  display: block;
+
+  margin-bottom: 25px;
+
+  color: rgba(
+    210,
+    222,
+    230,
+    0.38
+  );
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.24em;
+
+  text-transform: uppercase;
+}
+
+.accounting-experience-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      7,
+      1fr
+    );
+
+  gap: 10px;
+}
+
+.accounting-experience-item {
+  min-height: 72px;
+
+  padding:
+    16px 9px;
+
+  border-top:
+    1px solid
+    rgba(
+      215,
+      225,
+      232,
+      0.13
+    );
+
+  border-bottom:
+    1px solid
+    rgba(
+      215,
+      225,
+      232,
+      0.05
+    );
+
+  opacity: 0;
+
+  transform:
+    translateY(20px);
+}
+
+.accounting-experience-item strong {
+  display: block;
+
+  color: rgba(
+    235,
+    241,
+    244,
+    0.76
+  );
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.1em;
+}
+
+.accounting-experience-item small {
+  display: block;
+
+  margin-top: 9px;
+
+  color: rgba(
+    205,
+    220,
+    228,
+    0.32
+  );
+
+  font-size: 7px;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+}
+
+
+/* ============================================================
+   FINAL
+   ============================================================ */
+
+.accounting-final {
+  position: absolute;
+
+  left: 50%;
+  top: 45%;
+
+  width: min(
+    1100px,
+    calc(100% - 60px)
+  );
+
+  transform:
+    translate(
+      -50%,
+      60px
+    )
+    scale(0.88);
+
+  opacity: 0;
+
+  text-align: center;
+
+  will-change:
+    transform,
+    opacity;
+}
+
+.accounting-final > span {
+  display: block;
+
+  margin-bottom: 20px;
+
+  color: rgba(
+    210,
+    222,
+    230,
+    0.4
+  );
+
+  font-size: 10px;
+
+  letter-spacing: 0.3em;
+
+  text-transform: uppercase;
+}
+
+.accounting-final h2 {
+  margin: 0;
+
+  color: #f1f3f3;
+
+  font-size: clamp(
+    62px,
+    10.5vw,
+    172px
+  );
+
+  font-weight: 600;
+
+  line-height: 0.8;
+
+  letter-spacing: -0.085em;
+}
+
+.accounting-final h2 em {
+  display: inline-block;
+
+  margin-right: 0.1em;
+
+  color: rgba(
+    205,
+    218,
+    225,
+    0.38
+  );
+
+  font-style: normal;
+}
+
+
+/* ============================================================
+   FINAL META
+   ============================================================ */
+
+.accounting-final-meta {
+  position: absolute;
+
+  left: 50%;
+  bottom: 10%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 34px;
+
+  transform:
+    translateX(-50%)
+    translateY(25px);
+
+  opacity: 0;
+
+  will-change:
+    transform,
+    opacity;
+}
+
+.accounting-final-meta div {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.accounting-final-meta strong {
+  color: rgba(
+    239,
+    243,
+    245,
+    0.82
+  );
+
+  font-family:
+    monospace;
+
+  font-size: 34px;
+
+  font-weight: 400;
+
+  line-height: 1;
+}
+
+.accounting-final-meta span {
+  margin-top: 7px;
+
+  color: rgba(
+    205,
+    220,
+    228,
+    0.35
+  );
+
+  font-size: 8px;
+
+  letter-spacing: 0.18em;
+
+  text-transform: uppercase;
+}
+
+.accounting-final-meta i {
+  width: 1px;
+  height: 36px;
+
+  background:
+    rgba(
+      215,
+      225,
+      232,
+      0.15
+    );
+}
+
+
+/* ============================================================
+   SCROLL
+   ============================================================ */
+
+.accounting-scroll {
+  position: absolute;
+
+  left: 50%;
+  bottom: 34px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 12px;
+
+  transform:
+    translateX(-50%);
+
+  color: rgba(
+    220,
+    230,
+    235,
+    0.42
+  );
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.28em;
+
+  will-change:
+    transform,
+    opacity;
+}
+
+.accounting-scroll i {
+  position: relative;
+
+  width: 1px;
+  height: 48px;
+
+  overflow: hidden;
+
+  background:
+    rgba(
+      220,
+      230,
+      235,
+      0.14
+    );
+}
+
+.accounting-scroll i::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: -100%;
+
+  width: 100%;
+  height: 50%;
+
+  background:
+    rgba(
+      230,
+      240,
+      245,
+      0.75
+    );
+
+  animation:
+    accounting-scroll
+    1.7s
+    ease-in-out
+    infinite;
+}
+
+@keyframes accounting-scroll {
+  0% {
+    transform:
+      translateY(0);
+  }
+
+  50% {
+    transform:
+      translateY(300%);
+  }
+
+  100% {
+    transform:
+      translateY(300%);
+  }
+}
+
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 1000px) {
+  .accounting-chapter {
+    left: 30px;
+    top: 30px;
+  }
+
+  .accounting-intro {
+    right: 30px;
+    top: 30px;
+  }
+
+  .accounting-system {
+    width: 250px;
+  }
+
+  .accounting-system-left {
+    left: 5%;
+  }
+
+  .accounting-system-right {
+    right: 5%;
+  }
+
+  .accounting-experience {
+    width:
+      calc(100% - 60px);
+  }
+
+  .accounting-experience-grid {
+    grid-template-columns:
+      repeat(4, 1fr);
+  }
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 650px) {
+  .accounting {
+    height: 440vh;
+  }
+
+  .accounting-chapter {
+    left: 20px;
+    top: 22px;
+
+    gap: 9px;
+
+    font-size: 9px;
+  }
+
+  .accounting-chapter i {
+    width: 25px;
+  }
+
+  .accounting-intro {
+    right: 20px;
+    top: 22px;
+
+    gap: 3px;
+  }
+
+  .accounting-intro strong {
+    font-size: 10px;
+  }
+
+  .accounting-intro span,
+  .accounting-intro small {
+    font-size: 6px;
+  }
+
+  .accounting-hero {
+    width:
+      calc(100% - 36px);
+  }
+
+  .accounting-hero > span {
+    font-size: 7px;
+
+    letter-spacing: 0.2em;
+  }
+
+  .accounting-hero h2 {
+    font-size: 16vw;
+  }
+
+  .accounting-hero p {
+    margin-top: 22px;
+
+    font-size: 8px;
+  }
+
+  .accounting-system {
+    top: 22%;
+
+    width: 145px;
+  }
+
+  .accounting-system-left {
+    left: 20px;
+  }
+
+  .accounting-system-right {
+    right: 20px;
+  }
+
+  .accounting-system-label {
+    font-size: 7px;
+  }
+
+  .accounting-system-value {
+    font-size: 19px;
+  }
+
+  .accounting-system p {
+    font-size: 7px;
+  }
+
+  .accounting-experience {
+    bottom: 14%;
+
+    width:
+      calc(100% - 36px);
+  }
+
+  .accounting-experience > span {
+    margin-bottom: 15px;
+
+    font-size: 7px;
+  }
+
+  .accounting-experience-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+
+    gap: 6px;
+  }
+
+  .accounting-experience-item {
+    min-height: 55px;
+
+    padding: 10px 6px;
+  }
+
+  .accounting-experience-item strong {
+    font-size: 8px;
+  }
+
+  .accounting-experience-item small {
+    margin-top: 5px;
+
+    font-size: 5px;
+  }
+
+  .accounting-final {
+    width:
+      calc(100% - 30px);
+  }
+
+  .accounting-final > span {
+    font-size: 7px;
+  }
+
+  .accounting-final h2 {
+    font-size: 16vw;
+  }
+
+  .accounting-final-meta {
+    bottom: 8%;
+
+    gap: 17px;
+  }
+
+  .accounting-final-meta strong {
+    font-size: 22px;
+  }
+
+  .accounting-final-meta span {
+    font-size: 6px;
+  }
+
+  .accounting-final-meta i {
+    height: 26px;
+  }
+
+  .accounting-scroll {
+    bottom: 20px;
+
+    font-size: 6px;
+  }
+
+  .accounting-scroll i {
+    height: 34px;
+  }
+}
+
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .accounting-scroll i::after {
+    animation: none;
+  }
+}

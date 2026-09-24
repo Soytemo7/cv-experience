@@ -1,0 +1,1169 @@
+/* ============================================================
+   FINANCE / TECHNOLOGY
+   Finanzas + Ingeniería
+   ============================================================ */
+
+.finance-technology {
+  position: relative;
+
+  width: 100%;
+  height: 500vh;
+
+  background: #020304;
+
+  overflow: clip;
+}
+
+
+/* ============================================================
+   STICKY
+   ============================================================ */
+
+.finance-technology-sticky {
+  position: sticky;
+
+  top: 0;
+
+  width: 100%;
+  height: 100vh;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at center,
+      #111a20 0%,
+      #070c10 48%,
+      #020304 100%
+    );
+}
+
+
+/* ============================================================
+   CANVAS
+   ============================================================ */
+
+.finance-technology-canvas {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: block;
+}
+
+
+/* ============================================================
+   UI
+   ============================================================ */
+
+.finance-technology-ui {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 5;
+
+  pointer-events: none;
+
+  color: #edf2f4;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+}
+
+
+/* ============================================================
+   CHAPTER
+   ============================================================ */
+
+.finance-technology-chapter {
+  position: absolute;
+
+  top: 44px;
+  left: 48px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  color:
+    rgba(
+      225,
+      233,
+      238,
+      0.72
+    );
+
+  font-size: 12px;
+  font-weight: 600;
+
+  letter-spacing: 0.2em;
+
+  text-transform: uppercase;
+
+  will-change:
+    transform,
+    opacity;
+}
+
+.finance-technology-chapter span {
+  color:
+    rgba(
+      190,
+      215,
+      226,
+      0.4
+    );
+}
+
+.finance-technology-chapter i {
+  width: 55px;
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(
+        195,
+        220,
+        231,
+        0.48
+      ),
+      transparent
+    );
+}
+
+.finance-technology-chapter strong {
+  font-weight: 600;
+}
+
+
+/* ============================================================
+   INTRO
+   ============================================================ */
+
+.finance-technology-intro {
+  position: absolute;
+
+  top: 42px;
+  right: 48px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-end;
+
+  gap: 5px;
+
+  text-align: right;
+
+  will-change:
+    transform,
+    opacity;
+}
+
+.finance-technology-intro span {
+  color:
+    rgba(
+      210,
+      222,
+      230,
+      0.34
+    );
+
+  font-size: 9px;
+
+  letter-spacing: 0.25em;
+}
+
+.finance-technology-intro strong {
+  color:
+    rgba(
+      232,
+      240,
+      244,
+      0.72
+    );
+
+  font-size: 14px;
+
+  letter-spacing: 0.14em;
+}
+
+.finance-technology-intro small {
+  color:
+    rgba(
+      205,
+      220,
+      228,
+      0.36
+    );
+
+  font-size: 9px;
+
+  letter-spacing: 0.16em;
+}
+
+
+/* ============================================================
+   HERO
+   ============================================================ */
+
+.finance-technology-hero {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width:
+    min(
+      1180px,
+      calc(100% - 80px)
+    );
+
+  transform:
+    translate(
+      -50%,
+      -50%
+    );
+
+  text-align: center;
+
+  will-change:
+    transform,
+    opacity;
+}
+
+.finance-technology-hero > span {
+  display: block;
+
+  margin-bottom: 20px;
+
+  color:
+    rgba(
+      205,
+      223,
+      232,
+      0.42
+    );
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 0.3em;
+
+  text-transform: uppercase;
+}
+
+.finance-technology-hero h2 {
+  margin: 0;
+
+  color:
+    rgba(
+      240,
+      245,
+      247,
+      0.94
+    );
+
+  font-size:
+    clamp(
+      54px,
+      8.8vw,
+      148px
+    );
+
+  font-weight: 600;
+
+  line-height: 0.84;
+
+  letter-spacing: -0.075em;
+}
+
+.finance-technology-hero h2 em {
+  display: inline-block;
+
+  margin:
+    0 0.08em;
+
+  color:
+    rgba(
+      174,
+      207,
+      220,
+      0.28
+    );
+
+  font-style: normal;
+
+  transform:
+    scaleX(0.65);
+}
+
+.finance-technology-hero p {
+  margin: 30px 0 0;
+
+  color:
+    rgba(
+      210,
+      226,
+      233,
+      0.52
+    );
+
+  font-size: 12px;
+
+  line-height: 1.8;
+
+  letter-spacing: 0.2em;
+
+  text-transform: uppercase;
+}
+
+
+/* ============================================================
+   SYSTEMS
+   ============================================================ */
+
+.finance-technology-system {
+  position: absolute;
+
+  top: 25%;
+
+  width: 340px;
+
+  will-change:
+    transform,
+    opacity;
+}
+
+.finance-technology-system-left {
+  left: 6.5%;
+
+  text-align: left;
+}
+
+.finance-technology-system-right {
+  right: 6.5%;
+
+  text-align: right;
+}
+
+.finance-technology-system-label {
+  color:
+    rgba(
+      195,
+      220,
+      230,
+      0.42
+    );
+
+  font-size: 10px;
+
+  letter-spacing: 0.24em;
+
+  transform:
+    translateY(25px);
+
+  opacity: 0;
+}
+
+.finance-technology-system-value {
+  margin-top: 12px;
+
+  color:
+    rgba(
+      237,
+      243,
+      246,
+      0.92
+    );
+
+  font-size:
+    clamp(
+      28px,
+      3.2vw,
+      46px
+    );
+
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: -0.045em;
+
+  transform:
+    translateY(30px);
+
+  opacity: 0;
+}
+
+.finance-technology-system-copy {
+  margin: 15px 0 0;
+
+  color:
+    rgba(
+      202,
+      220,
+      228,
+      0.5
+    );
+
+  font-size: 10px;
+
+  line-height: 1.8;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+
+  transform:
+    translateY(20px);
+
+  opacity: 0;
+}
+
+
+/* ============================================================
+   BRIDGE
+   ============================================================ */
+
+.finance-technology-bridge {
+  position: absolute;
+
+  left: 50%;
+
+  top: 39%;
+
+  width: 46%;
+
+  height: 1px;
+
+  transform:
+    translateX(-50%)
+    scaleX(0);
+
+  transform-origin: center;
+
+  opacity: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(
+        180,
+        215,
+        228,
+        0.38
+      ),
+      rgba(
+        220,
+        232,
+        237,
+        0.55
+      ),
+      rgba(
+        180,
+        215,
+        228,
+        0.38
+      ),
+      transparent
+    );
+
+  box-shadow:
+    0 0 20px
+    rgba(
+      155,
+      205,
+      225,
+      0.1
+    );
+
+  will-change:
+    transform,
+    opacity;
+}
+
+
+/* ============================================================
+   CONVERGENCE
+   ============================================================ */
+
+.finance-technology-convergence {
+  position: absolute;
+
+  left: 50%;
+  top: 51%;
+
+  width:
+    min(
+      850px,
+      calc(100% - 80px)
+    );
+
+  transform:
+    translate(
+      -50%,
+      35px
+    );
+
+  opacity: 0;
+
+  text-align: center;
+
+  will-change:
+    transform,
+    opacity;
+}
+
+.finance-technology-convergence > span {
+  display: block;
+
+  margin-bottom: 15px;
+
+  color:
+    rgba(
+      205,
+      222,
+      230,
+      0.38
+    );
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.26em;
+
+  text-transform: uppercase;
+}
+
+.finance-technology-convergence h3 {
+  margin: 0 0 30px;
+
+  color:
+    rgba(
+      239,
+      244,
+      246,
+      0.9
+    );
+
+  font-size:
+    clamp(
+      32px,
+      4.5vw,
+      62px
+    );
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  letter-spacing: -0.045em;
+}
+
+.finance-technology-convergence h3 em {
+  display: inline-block;
+
+  margin:
+    0 0.16em;
+
+  color:
+    rgba(
+      173,
+      210,
+      224,
+      0.45
+    );
+
+  font-style: normal;
+}
+
+.finance-technology-convergence-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      4,
+      1fr
+    );
+
+  gap: 10px;
+}
+
+.finance-technology-convergence-item {
+  min-height: 72px;
+
+  padding:
+    15px 10px;
+
+  border-top:
+    1px solid
+    rgba(
+      210,
+      228,
+      235,
+      0.13
+    );
+
+  border-bottom:
+    1px solid
+    rgba(
+      210,
+      228,
+      235,
+      0.05
+    );
+
+  opacity: 0;
+
+  transform:
+    translateY(20px);
+}
+
+.finance-technology-convergence-item strong {
+  display: block;
+
+  color:
+    rgba(
+      233,
+      241,
+      244,
+      0.76
+    );
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.1em;
+}
+
+.finance-technology-convergence-item small {
+  display: block;
+
+  margin-top: 8px;
+
+  color:
+    rgba(
+      200,
+      220,
+      228,
+      0.32
+    );
+
+  font-size: 7px;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+}
+
+
+/* ============================================================
+   FINAL
+   ============================================================ */
+
+.finance-technology-final {
+  position: absolute;
+
+  left: 50%;
+  top: 43%;
+
+  width:
+    min(
+      1100px,
+      calc(100% - 60px)
+    );
+
+  transform:
+    translate(
+      -50%,
+      60px
+    )
+    scale(0.88);
+
+  opacity: 0;
+
+  text-align: center;
+
+  will-change:
+    transform,
+    opacity;
+}
+
+.finance-technology-final > span {
+  display: block;
+
+  margin-bottom: 20px;
+
+  color:
+    rgba(
+      205,
+      222,
+      230,
+      0.4
+    );
+
+  font-size: 10px;
+
+  letter-spacing: 0.3em;
+
+  text-transform: uppercase;
+}
+
+.finance-technology-final h2 {
+  margin: 0;
+
+  color: #f1f4f5;
+
+  font-size:
+    clamp(
+      60px,
+      10vw,
+      168px
+    );
+
+  font-weight: 600;
+
+  line-height: 0.8;
+
+  letter-spacing: -0.085em;
+}
+
+.finance-technology-final h2 em {
+  display: inline-block;
+
+  margin-right: 0.1em;
+
+  color:
+    rgba(
+      200,
+      220,
+      228,
+      0.38
+    );
+
+  font-style: normal;
+}
+
+
+/* ============================================================
+   FINAL META
+   ============================================================ */
+
+.finance-technology-final-meta {
+  position: absolute;
+
+  left: 50%;
+  bottom: 10%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 34px;
+
+  transform:
+    translateX(-50%)
+    translateY(25px);
+
+  opacity: 0;
+
+  will-change:
+    transform,
+    opacity;
+}
+
+.finance-technology-final-meta div {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.finance-technology-final-meta strong {
+  color:
+    rgba(
+      238,
+      244,
+      246,
+      0.82
+    );
+
+  font-family:
+    monospace;
+
+  font-size: 34px;
+
+  font-weight: 400;
+
+  line-height: 1;
+}
+
+.finance-technology-final-meta span {
+  margin-top: 7px;
+
+  color:
+    rgba(
+      200,
+      220,
+      228,
+      0.35
+    );
+
+  font-size: 8px;
+
+  letter-spacing: 0.18em;
+
+  text-transform: uppercase;
+}
+
+.finance-technology-final-meta i {
+  width: 1px;
+  height: 36px;
+
+  background:
+    rgba(
+      210,
+      228,
+      235,
+      0.15
+    );
+}
+
+
+/* ============================================================
+   SCROLL
+   ============================================================ */
+
+.finance-technology-scroll {
+  position: absolute;
+
+  left: 50%;
+  bottom: 34px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 12px;
+
+  transform:
+    translateX(-50%);
+
+  color:
+    rgba(
+      215,
+      230,
+      236,
+      0.42
+    );
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.28em;
+
+  will-change:
+    transform,
+    opacity;
+}
+
+.finance-technology-scroll i {
+  position: relative;
+
+  width: 1px;
+  height: 48px;
+
+  overflow: hidden;
+
+  background:
+    rgba(
+      215,
+      230,
+      236,
+      0.14
+    );
+}
+
+.finance-technology-scroll i::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: -100%;
+
+  width: 100%;
+  height: 50%;
+
+  background:
+    rgba(
+      225,
+      240,
+      246,
+      0.75
+    );
+
+  animation:
+    finance-technology-scroll
+    1.7s
+    ease-in-out
+    infinite;
+}
+
+@keyframes finance-technology-scroll {
+  0% {
+    transform:
+      translateY(0);
+  }
+
+  50% {
+    transform:
+      translateY(300%);
+  }
+
+  100% {
+    transform:
+      translateY(300%);
+  }
+}
+
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 1000px) {
+  .finance-technology-chapter {
+    left: 30px;
+    top: 30px;
+  }
+
+  .finance-technology-intro {
+    right: 30px;
+    top: 30px;
+  }
+
+  .finance-technology-system {
+    width: 250px;
+  }
+
+  .finance-technology-system-left {
+    left: 5%;
+  }
+
+  .finance-technology-system-right {
+    right: 5%;
+  }
+
+  .finance-technology-convergence {
+    width:
+      calc(100% - 60px);
+  }
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 650px) {
+  .finance-technology {
+    height: 440vh;
+  }
+
+  .finance-technology-chapter {
+    left: 20px;
+    top: 22px;
+
+    gap: 9px;
+
+    font-size: 8px;
+  }
+
+  .finance-technology-chapter i {
+    width: 24px;
+  }
+
+  .finance-technology-intro {
+    right: 20px;
+    top: 22px;
+
+    gap: 3px;
+  }
+
+  .finance-technology-intro strong {
+    font-size: 9px;
+  }
+
+  .finance-technology-intro span,
+  .finance-technology-intro small {
+    font-size: 5px;
+  }
+
+  .finance-technology-hero {
+    width:
+      calc(100% - 30px);
+  }
+
+  .finance-technology-hero > span {
+    font-size: 6px;
+
+    letter-spacing: 0.16em;
+  }
+
+  .finance-technology-hero h2 {
+    font-size: 13.8vw;
+  }
+
+  .finance-technology-hero p {
+    margin-top: 20px;
+
+    font-size: 7px;
+
+    letter-spacing: 0.13em;
+  }
+
+  .finance-technology-system {
+    top: 22%;
+
+    width: 142px;
+  }
+
+  .finance-technology-system-left {
+    left: 18px;
+  }
+
+  .finance-technology-system-right {
+    right: 18px;
+  }
+
+  .finance-technology-system-label {
+    font-size: 6px;
+  }
+
+  .finance-technology-system-value {
+    font-size: 18px;
+  }
+
+  .finance-technology-system-copy {
+    font-size: 6px;
+
+    line-height: 1.7;
+
+    letter-spacing: 0.08em;
+  }
+
+  .finance-technology-bridge {
+    top: 39%;
+
+    width: 70%;
+  }
+
+  .finance-technology-convergence {
+    top: 48%;
+
+    width:
+      calc(100% - 30px);
+  }
+
+  .finance-technology-convergence > span {
+    font-size: 6px;
+
+    letter-spacing: 0.17em;
+  }
+
+  .finance-technology-convergence h3 {
+    margin-bottom: 20px;
+
+    font-size: 26px;
+  }
+
+  .finance-technology-convergence-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+
+    gap: 6px;
+  }
+
+  .finance-technology-convergence-item {
+    min-height: 52px;
+
+    padding:
+      10px 6px;
+  }
+
+  .finance-technology-convergence-item strong {
+    font-size: 7px;
+  }
+
+  .finance-technology-convergence-item small {
+    margin-top: 5px;
+
+    font-size: 5px;
+  }
+
+  .finance-technology-final {
+    width:
+      calc(100% - 24px);
+  }
+
+  .finance-technology-final > span {
+    font-size: 6px;
+  }
+
+  .finance-technology-final h2 {
+    font-size: 15.5vw;
+  }
+
+  .finance-technology-final-meta {
+    bottom: 8%;
+
+    gap: 16px;
+  }
+
+  .finance-technology-final-meta strong {
+    font-size: 21px;
+  }
+
+  .finance-technology-final-meta span {
+    font-size: 5px;
+  }
+
+  .finance-technology-final-meta i {
+    height: 25px;
+  }
+
+  .finance-technology-scroll {
+    bottom: 20px;
+
+    font-size: 6px;
+  }
+
+  .finance-technology-scroll i {
+    height: 34px;
+  }
+}
+
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .finance-technology-scroll i::after {
+    animation: none;
+  }
+}

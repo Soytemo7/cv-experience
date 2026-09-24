@@ -1,0 +1,549 @@
+/* ============================================================
+   FOOTER TRANSITION
+   SIGNAL / CONNECTION / DISSIPATION
+   ============================================================ */
+
+.footer-transition {
+  position: relative;
+
+  width: 100%;
+
+  height: 520vh;
+
+  overflow: clip;
+
+  background:
+    radial-gradient(
+      circle at 50% 50%,
+      #17242d 0%,
+      #0d151b 38%,
+      #070b0f 72%,
+      #030506 100%
+    );
+
+  color: #dceaf1;
+
+  isolation: isolate;
+}
+
+
+/* ============================================================
+   STICKY
+   ============================================================ */
+
+.footer-transition-sticky {
+  position: sticky;
+
+  top: 0;
+
+  width: 100%;
+
+  height: 100vh;
+
+  min-height: 620px;
+
+  overflow: hidden;
+}
+
+
+/* ============================================================
+   SCENE
+   ============================================================ */
+
+.footer-transition-scene {
+  position: relative;
+
+  width: 100%;
+
+  height: 100%;
+
+  overflow: hidden;
+
+  transform-origin: center center;
+
+  perspective: 1200px;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(91, 126, 148, 0.06),
+      transparent 42%
+    );
+}
+
+
+/* ============================================================
+   CANVAS
+   ============================================================ */
+
+.footer-transition-canvas {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+  display: block;
+
+  pointer-events: none;
+
+  z-index: 1;
+}
+
+
+/* ============================================================
+   FINAL SIGNAL
+   ============================================================ */
+
+.footer-transition-signal {
+  position: absolute;
+
+  top: 50%;
+
+  left: 50%;
+
+  z-index: 5;
+
+  transform:
+    translate(-50%, -50%);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  pointer-events: none;
+
+  white-space: nowrap;
+}
+
+.footer-transition-signal span {
+  display: block;
+
+  font-family:
+    "Inter",
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.42em;
+
+  text-transform: uppercase;
+
+  color:
+    rgba(
+      198,
+      219,
+      229,
+      0.58
+    );
+
+  text-shadow:
+    0 0 22px
+      rgba(
+        150,
+        195,
+        215,
+        0.22
+      );
+}
+
+
+/* ============================================================
+   CORE
+   ============================================================ */
+
+.footer-transition-core {
+  position: absolute;
+
+  top: 50%;
+
+  left: 50%;
+
+  width: 8px;
+
+  height: 8px;
+
+  z-index: 4;
+
+  border-radius: 50%;
+
+  transform:
+    translate(-50%, -50%);
+
+  background:
+    #e3f2f8;
+
+  box-shadow:
+    0 0 8px
+      rgba(
+        210,
+        237,
+        247,
+        0.8
+      ),
+
+    0 0 28px
+      rgba(
+        139,
+        190,
+        211,
+        0.38
+      ),
+
+    0 0 70px
+      rgba(
+        94,
+        143,
+        166,
+        0.2
+      );
+
+  pointer-events: none;
+}
+
+
+/* ============================================================
+   STATUS
+   ============================================================ */
+
+.footer-transition-status {
+  position: absolute;
+
+  left: 50%;
+
+  bottom: 12%;
+
+  z-index: 5;
+
+  transform:
+    translateX(-50%);
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 5px;
+
+  pointer-events: none;
+
+  white-space: nowrap;
+}
+
+.footer-transition-status span {
+  font-family:
+    "Inter",
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+  font-size: 8px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.34em;
+
+  text-transform: uppercase;
+
+  color:
+    rgba(
+      181,
+      205,
+      217,
+      0.34
+    );
+}
+
+.footer-transition-status span:last-child {
+  color:
+    rgba(
+      220,
+      236,
+      243,
+      0.65
+    );
+}
+
+
+/* ============================================================
+   FLASH
+   ============================================================ */
+
+.footer-transition-flash {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 10;
+
+  background:
+    #e8f4f8;
+
+  opacity: 0;
+
+  pointer-events: none;
+}
+
+
+/* ============================================================
+   SCANLINES
+   ============================================================ */
+
+.footer-transition-scanlines {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 6;
+
+  pointer-events: none;
+
+  opacity: 0.13;
+
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      rgba(
+        255,
+        255,
+        255,
+        0.018
+      ) 0,
+      rgba(
+        255,
+        255,
+        255,
+        0.018
+      ) 1px,
+      transparent 1px,
+      transparent 5px
+    );
+
+  mix-blend-mode:
+    screen;
+}
+
+
+/* ============================================================
+   GRAIN
+   ============================================================ */
+
+.footer-transition-grain {
+  position: absolute;
+
+  inset: -20%;
+
+  z-index: 7;
+
+  pointer-events: none;
+
+  opacity: 0.035;
+
+  background-image:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.92' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E");
+
+  animation:
+    footer-transition-grain
+    0.35s steps(2)
+    infinite;
+}
+
+@keyframes footer-transition-grain {
+  0% {
+    transform:
+      translate3d(
+        0,
+        0,
+        0
+      );
+  }
+
+  25% {
+    transform:
+      translate3d(
+        -2%,
+        1%,
+        0
+      );
+  }
+
+  50% {
+    transform:
+      translate3d(
+        1%,
+        -2%,
+        0
+      );
+  }
+
+  75% {
+    transform:
+      translate3d(
+        2%,
+        2%,
+        0
+      );
+  }
+
+  100% {
+    transform:
+      translate3d(
+        -1%,
+        -1%,
+        0
+      );
+  }
+}
+
+
+/* ============================================================
+   EDGES
+   ============================================================ */
+
+.footer-transition-edge {
+  position: absolute;
+
+  z-index: 8;
+
+  pointer-events: none;
+
+  opacity: 0.25;
+
+  background:
+    rgba(
+      170,
+      200,
+      213,
+      0.16
+    );
+}
+
+.footer-transition-edge-top {
+  top: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  height: 1px;
+}
+
+.footer-transition-edge-right {
+  top: 0;
+
+  right: 0;
+
+  width: 1px;
+
+  height: 100%;
+}
+
+.footer-transition-edge-bottom {
+  bottom: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  height: 1px;
+}
+
+.footer-transition-edge-left {
+  top: 0;
+
+  left: 0;
+
+  width: 1px;
+
+  height: 100%;
+}
+
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+
+@media (
+  prefers-reduced-motion: reduce
+) {
+  .footer-transition-grain {
+    animation: none;
+  }
+}
+
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (
+  max-width: 900px
+) {
+  .footer-transition {
+    height: 440vh;
+  }
+
+  .footer-transition-sticky {
+    min-height: 560px;
+  }
+
+  .footer-transition-signal span {
+    font-size: 9px;
+
+    letter-spacing: 0.34em;
+  }
+
+  .footer-transition-status {
+    bottom: 10%;
+  }
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (
+  max-width: 600px
+) {
+  .footer-transition {
+    height: 400vh;
+  }
+
+  .footer-transition-sticky {
+    min-height: 520px;
+  }
+
+  .footer-transition-signal span {
+    font-size: 8px;
+
+    letter-spacing: 0.28em;
+  }
+
+  .footer-transition-status {
+    bottom: 9%;
+  }
+
+  .footer-transition-status span {
+    font-size: 7px;
+
+    letter-spacing: 0.27em;
+  }
+
+  .footer-transition-scanlines {
+    opacity: 0.08;
+  }
+
+  .footer-transition-grain {
+    opacity: 0.025;
+  }
+}

@@ -1,0 +1,2194 @@
+/* ============================================================
+   FORMATION
+   03 — FORMACIÓN
+   ============================================================ */
+
+
+/* ============================================================
+   ROOT
+   ============================================================ */
+
+.formation {
+  position: relative;
+
+  width: 100%;
+  min-height: 900vh;
+
+  overflow: clip;
+
+  background: #020403;
+  color: #edf3ee;
+}
+
+.formation-sticky {
+  position: relative;
+
+  width: 100%;
+  height: 100vh;
+  min-height: 680px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 50% 45%,
+      rgba(52, 76, 60, 0.13),
+      transparent 32%
+    ),
+    #020403;
+}
+
+
+/* ============================================================
+   CANVAS
+   ============================================================ */
+
+.formation-canvas {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 2;
+
+  pointer-events: none;
+
+  opacity: 0.75;
+}
+
+
+/* ============================================================
+   GRID
+   ============================================================ */
+
+.formation-background-grid {
+  position: absolute;
+
+  inset: -20%;
+
+  z-index: 1;
+
+  pointer-events: none;
+
+  opacity: 0.22;
+
+  background-image:
+    linear-gradient(
+      rgba(202, 224, 208, 0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(202, 224, 208, 0.035) 1px,
+      transparent 1px
+    );
+
+  background-size:
+    80px 80px,
+    80px 80px;
+
+  transform:
+    perspective(900px)
+    rotateX(62deg)
+    translateY(18%);
+
+  transform-origin: center bottom;
+}
+
+
+/* ============================================================
+   NOISE
+   ============================================================ */
+
+.formation-noise {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 50;
+
+  pointer-events: none;
+
+  opacity: 0.035;
+
+  background-image:
+    repeating-radial-gradient(
+      circle at 0 0,
+      rgba(255, 255, 255, 0.8) 0,
+      rgba(255, 255, 255, 0.8) 1px,
+      transparent 1px,
+      transparent 4px
+    );
+
+  mix-blend-mode: screen;
+}
+
+
+/* ============================================================
+   VIGNETTE
+   ============================================================ */
+
+.formation-vignette {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 45;
+
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      transparent 35%,
+      rgba(0, 0, 0, 0.2) 65%,
+      rgba(0, 0, 0, 0.82) 100%
+    );
+}
+
+
+/* ============================================================
+   SCAN
+   ============================================================ */
+
+.formation-scan {
+  position: absolute;
+
+  z-index: 55;
+
+  top: -100vh;
+  left: 0;
+
+  width: 100%;
+  height: 1px;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(209, 231, 216, 0.05) 20%,
+      rgba(222, 240, 227, 0.5) 50%,
+      rgba(209, 231, 216, 0.05) 80%,
+      transparent
+    );
+
+  box-shadow:
+    0 0 28px rgba(203, 231, 210, 0.2);
+
+  animation:
+    formation-scan
+    7s
+    linear
+    infinite;
+}
+
+@keyframes formation-scan {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+
+  12% {
+    opacity: 0.7;
+  }
+
+  50% {
+    opacity: 0.35;
+  }
+
+  100% {
+    transform: translateY(200vh);
+    opacity: 0;
+  }
+}
+
+
+/* ============================================================
+   TOP BAR
+   ============================================================ */
+
+.formation-topbar {
+  position: absolute;
+
+  z-index: 80;
+
+  top: 30px;
+  left: 42px;
+  right: 42px;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    auto
+    1fr;
+
+  align-items: center;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 0.24em;
+
+  text-transform: uppercase;
+
+  color: rgba(221, 233, 224, 0.42);
+}
+
+.formation-topbar > div {
+  display: flex;
+
+  gap: 16px;
+
+  align-items: center;
+}
+
+.formation-topbar > div:nth-child(2) {
+  color: rgba(222, 237, 226, 0.28);
+}
+
+.formation-topbar > div:last-child {
+  justify-content: flex-end;
+}
+
+.formation-topbar > div:first-child span:first-child {
+  color: rgba(231, 241, 234, 0.9);
+}
+
+
+/* ============================================================
+   PROGRESS
+   ============================================================ */
+
+.formation-progress {
+  position: absolute;
+
+  z-index: 80;
+
+  top: 50%;
+  right: 35px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  transform: translateY(-50%);
+}
+
+.formation-progress-number {
+  writing-mode: vertical-rl;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 0.2em;
+
+  color: rgba(220, 233, 223, 0.38);
+}
+
+.formation-progress-track {
+  position: relative;
+
+  width: 2px;
+  height: 190px;
+
+  overflow: hidden;
+
+  background: rgba(216, 231, 220, 0.09);
+}
+
+.formation-progress-fill {
+  position: absolute;
+
+  inset: 0;
+
+  transform-origin: top;
+
+  transform: scaleY(0);
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(221, 240, 226, 0.9),
+      rgba(138, 176, 148, 0.18)
+    );
+
+  box-shadow:
+    0 0 14px rgba(180, 215, 189, 0.25);
+}
+
+
+/* ============================================================
+   SCENES
+   ============================================================ */
+
+.formation-scenes {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 10;
+}
+
+.formation-scene {
+  position: absolute;
+
+  inset: 0;
+
+  overflow: hidden;
+
+  visibility: hidden;
+}
+
+
+/* ============================================================
+   SCENE EFFECTS
+   ============================================================ */
+
+.formation-scene-effects {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 3;
+
+  pointer-events: none;
+}
+
+.formation-glow {
+  position: absolute;
+
+  width: 32vw;
+  height: 32vw;
+
+  max-width: 500px;
+  max-height: 500px;
+
+  border-radius: 50%;
+
+  filter: blur(70px);
+
+  opacity: 0;
+}
+
+.formation-glow-a {
+  left: 8%;
+  top: 24%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(105, 157, 119, 0.13),
+      transparent 70%
+    );
+}
+
+.formation-glow-b {
+  right: 8%;
+  bottom: 15%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(68, 108, 80, 0.11),
+      transparent 70%
+    );
+}
+
+
+/* ============================================================
+   DECORATIVE LINES
+   ============================================================ */
+
+.formation-horizontal-line,
+.formation-vertical-line {
+  position: absolute;
+
+  opacity: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(199, 224, 205, 0.28),
+      transparent
+    );
+}
+
+.formation-horizontal-line {
+  left: 5%;
+
+  width: 90%;
+  height: 1px;
+
+  transform-origin: center;
+
+  transform: scaleX(0);
+}
+
+.formation-horizontal-line.line-a {
+  top: 29%;
+}
+
+.formation-horizontal-line.line-b {
+  top: 66%;
+}
+
+.formation-horizontal-line.line-c {
+  top: 82%;
+}
+
+.formation-vertical-line {
+  top: 14%;
+
+  width: 1px;
+  height: 72%;
+
+  transform-origin: center;
+
+  transform: scaleY(0);
+
+  background:
+    linear-gradient(
+      to bottom,
+      transparent,
+      rgba(199, 224, 205, 0.18),
+      transparent
+    );
+}
+
+.formation-vertical-line.line-v-a {
+  left: 13%;
+}
+
+.formation-vertical-line.line-v-b {
+  right: 13%;
+}
+
+
+/* ============================================================
+   CROSSHAIRS
+   ============================================================ */
+
+.formation-crosshair {
+  position: absolute;
+
+  width: 32px;
+  height: 32px;
+
+  border:
+    1px solid rgba(202, 226, 207, 0.16);
+
+  border-radius: 50%;
+
+  opacity: 0;
+
+  transform: scale(0);
+}
+
+.formation-crosshair::before,
+.formation-crosshair::after {
+  content: "";
+
+  position: absolute;
+
+  background: rgba(202, 226, 207, 0.2);
+}
+
+.formation-crosshair::before {
+  left: 50%;
+  top: -9px;
+
+  width: 1px;
+  height: 50px;
+}
+
+.formation-crosshair::after {
+  top: 50%;
+  left: -9px;
+
+  width: 50px;
+  height: 1px;
+}
+
+.crosshair-a {
+  left: 12%;
+  top: 27%;
+}
+
+.crosshair-b {
+  right: 12%;
+  bottom: 27%;
+}
+
+
+/* ============================================================
+   SVG
+   ============================================================ */
+
+.formation-svg {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 6;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: visible;
+
+  pointer-events: none;
+}
+
+.formation-svg path,
+.formation-svg line,
+.formation-svg circle,
+.formation-svg rect {
+  vector-effect: non-scaling-stroke;
+}
+
+.formation-svg-path,
+.formation-branch,
+.formation-fiscal-axis,
+.formation-fiscal-diagonal,
+.formation-software-path {
+  fill: none;
+
+  stroke:
+    rgba(193, 223, 200, 0.34);
+
+  stroke-width: 1;
+}
+
+.path-secondary {
+  stroke:
+    rgba(156, 191, 164, 0.18);
+}
+
+.path-grid {
+  stroke:
+    rgba(174, 205, 181, 0.08);
+}
+
+.path-accounting {
+  stroke:
+    rgba(187, 220, 194, 0.4);
+}
+
+.path-law {
+  stroke:
+    rgba(195, 216, 200, 0.36);
+}
+
+.path-center {
+  stroke:
+    rgba(221, 235, 224, 0.24);
+}
+
+.formation-svg-node {
+  fill:
+    rgba(222, 239, 226, 0.9);
+
+  stroke:
+    rgba(190, 225, 198, 0.4);
+
+  stroke-width: 1;
+
+  transform-box: fill-box;
+
+  transform-origin: center;
+}
+
+
+/* ============================================================
+   ORIGIN EFFECTS
+   ============================================================ */
+
+.formation-origin-pulse {
+  fill:
+    rgba(221, 239, 225, 0.85);
+
+  opacity: 0.7;
+}
+
+.formation-origin-pulse.pulse-two {
+  fill:
+    rgba(183, 218, 191, 0.6);
+}
+
+
+/* ============================================================
+   FOUNDATION EFFECTS
+   ============================================================ */
+
+.formation-foundation-pulse {
+  fill:
+    rgba(225, 241, 228, 0.9);
+}
+
+.formation-foundation-core-pulse {
+  fill: none;
+
+  stroke:
+    rgba(215, 238, 220, 0.6);
+
+  stroke-width: 1;
+
+  opacity: 0.5;
+}
+
+
+/* ============================================================
+   FISCAL
+   ============================================================ */
+
+.formation-fiscal-ring {
+  fill: none;
+
+  stroke:
+    rgba(190, 218, 196, 0.13);
+
+  stroke-width: 1;
+
+  transform-origin: center;
+
+  transform-box: fill-box;
+}
+
+.ring-large {
+  stroke-dasharray:
+    3 14;
+}
+
+.ring-medium {
+  stroke-dasharray:
+    1 10;
+}
+
+.ring-small {
+  stroke:
+    rgba(207, 229, 212, 0.2);
+
+  stroke-dasharray:
+    5 9;
+}
+
+.formation-fiscal-axis {
+  stroke:
+    rgba(203, 226, 209, 0.12);
+}
+
+.formation-fiscal-diagonal {
+  stroke:
+    rgba(196, 219, 201, 0.08);
+}
+
+.fiscal-node {
+  fill:
+    rgba(221, 238, 224, 0.75);
+}
+
+.formation-fiscal-pulse {
+  fill:
+    rgba(225, 241, 228, 0.85);
+}
+
+
+/* ============================================================
+   EXPANSION
+   ============================================================ */
+
+.formation-branch {
+  fill: none;
+
+  stroke-width: 1.3;
+}
+
+.branch-finance {
+  stroke:
+    rgba(196, 221, 201, 0.32);
+}
+
+.branch-systems {
+  stroke:
+    rgba(220, 238, 224, 0.5);
+}
+
+.branch-bio {
+  stroke:
+    rgba(158, 202, 170, 0.28);
+}
+
+.formation-expansion-node {
+  fill:
+    rgba(221, 239, 225, 0.85);
+
+  transform-box: fill-box;
+
+  transform-origin: center;
+}
+
+.formation-expansion-core {
+  fill:
+    rgba(207, 232, 214, 0.22);
+
+  stroke:
+    rgba(217, 239, 222, 0.6);
+
+  stroke-width: 1;
+
+  transform-box: fill-box;
+
+  transform-origin: center;
+}
+
+.formation-expansion-core-inner {
+  fill:
+    rgba(230, 244, 233, 0.9);
+}
+
+
+/* ============================================================
+   SOFTWARE
+   ============================================================ */
+
+.formation-software-path {
+  stroke:
+    rgba(207, 231, 212, 0.36);
+}
+
+.software-center {
+  stroke:
+    rgba(220, 239, 224, 0.55);
+}
+
+.software-top {
+  stroke:
+    rgba(224, 241, 227, 0.65);
+}
+
+.formation-software-module {
+  fill:
+    rgba(5, 10, 7, 0.85);
+
+  stroke:
+    rgba(202, 230, 208, 0.45);
+
+  stroke-width: 1;
+}
+
+.formation-software-core {
+  fill:
+    rgba(194, 224, 200, 0.12);
+
+  stroke:
+    rgba(219, 240, 224, 0.7);
+
+  stroke-width: 1;
+
+  transform-box: fill-box;
+
+  transform-origin: center;
+}
+
+.formation-software-core-inner {
+  fill:
+    rgba(232, 246, 235, 0.9);
+
+  transform-box: fill-box;
+
+  transform-origin: center;
+}
+
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+.formation-scene-header {
+  position: absolute;
+
+  z-index: 30;
+
+  top: 96px;
+
+  left: 8vw;
+  right: 8vw;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  opacity: 0;
+}
+
+.formation-scene-label {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 0.22em;
+
+  color:
+    rgba(220, 233, 223, 0.5);
+}
+
+.formation-scene-label span:first-child {
+  color:
+    rgba(231, 241, 234, 0.9);
+}
+
+.formation-scene-period {
+  font-size: 10px;
+  font-weight: 600;
+
+  letter-spacing: 0.2em;
+
+  color:
+    rgba(219, 232, 222, 0.52);
+}
+
+
+/* ============================================================
+   TITLE
+   ============================================================ */
+
+.formation-scene-title {
+  position: absolute;
+
+  z-index: 25;
+
+  left: 50%;
+  top: 15%;
+
+  width: min(950px, 78vw);
+
+  transform:
+    translateX(-50%)
+    translateY(60px);
+
+  text-align: center;
+
+  opacity: 0;
+}
+
+.formation-scene-kicker {
+  display: block;
+
+  margin-bottom: 17px;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 0.45em;
+
+  color:
+    rgba(191, 218, 198, 0.58);
+}
+
+.formation-scene-title h2 {
+  margin: 0;
+
+  font-size:
+    clamp(48px, 7.8vw, 118px);
+
+  line-height: 0.88;
+
+  font-weight: 500;
+
+  letter-spacing: -0.065em;
+
+  color:
+    rgba(239, 244, 240, 0.97);
+
+  text-shadow:
+    0 0 50px rgba(202, 229, 209, 0.06);
+}
+
+.formation-scene-title p {
+  margin:
+    20px
+    0
+    0;
+
+  font-size:
+    clamp(10px, 1vw, 13px);
+
+  font-weight: 600;
+
+  letter-spacing: 0.3em;
+
+  color:
+    rgba(214, 228, 217, 0.48);
+
+  opacity: 0;
+}
+
+
+/* ============================================================
+   RECORDS
+   ============================================================ */
+
+.formation-records {
+  position: absolute;
+
+  z-index: 35;
+
+  left: 50%;
+  top: 48%;
+
+  width: min(1000px, 72vw);
+
+  transform: translateX(-50%);
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 14px;
+}
+
+
+/* ============================================================
+   RECORD
+   ============================================================ */
+
+.formation-record {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    58px
+    110px
+    minmax(0, 1fr)
+    32px;
+
+  align-items: center;
+
+  min-height: 112px;
+
+  padding:
+    22px
+    26px;
+
+  border:
+    1px solid rgba(215, 232, 219, 0.11);
+
+  background:
+    linear-gradient(
+      105deg,
+      rgba(4, 8, 6, 0.96),
+      rgba(9, 14, 11, 0.91)
+    );
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.38);
+
+  backdrop-filter: blur(12px);
+
+  opacity: 0;
+
+  overflow: hidden;
+}
+
+.formation-record::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+  left: 0;
+
+  width: 2px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(212, 237, 218, 0.8),
+      rgba(130, 174, 142, 0.05)
+    );
+}
+
+.formation-record::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      110deg,
+      rgba(215, 235, 219, 0.045),
+      transparent 28%,
+      transparent 70%,
+      rgba(214, 233, 218, 0.02)
+    );
+}
+
+.formation-record-index {
+  align-self: start;
+
+  padding-top: 2px;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 0.18em;
+
+  color:
+    rgba(214, 230, 218, 0.3);
+}
+
+.formation-record-year {
+  font-size:
+    clamp(26px, 2.7vw, 40px);
+
+  line-height: 1;
+
+  font-weight: 500;
+
+  letter-spacing: -0.045em;
+
+  color:
+    rgba(238, 244, 239, 0.9);
+}
+
+.formation-record-body {
+  min-width: 0;
+}
+
+.formation-record-degree {
+  font-size:
+    clamp(17px, 1.65vw, 25px);
+
+  line-height: 1.05;
+
+  font-weight: 700;
+
+  letter-spacing: 0.01em;
+
+  color:
+    rgba(242, 246, 243, 0.96);
+}
+
+.formation-record-specialty {
+  margin-top: 5px;
+
+  font-size:
+    clamp(12px, 1.15vw, 17px);
+
+  line-height: 1.2;
+
+  font-weight: 500;
+
+  letter-spacing: 0.08em;
+
+  color:
+    rgba(199, 222, 205, 0.76);
+}
+
+.formation-record-institution {
+  margin-top: 12px;
+
+  font-size:
+    clamp(11px, 0.95vw, 14px);
+
+  line-height: 1.3;
+
+  color:
+    rgba(218, 230, 220, 0.58);
+}
+
+.formation-record-meta {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  margin-top: 6px;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+
+  color:
+    rgba(183, 210, 190, 0.4);
+}
+
+.formation-record-status {
+  padding:
+    3px
+    7px;
+
+  border:
+    1px solid rgba(165, 211, 175, 0.24);
+
+  color:
+    rgba(191, 226, 199, 0.7);
+}
+
+.formation-record-marker {
+  position: relative;
+
+  height: 48px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.formation-record-marker::before {
+  content: "";
+
+  position: absolute;
+
+  right: 3px;
+
+  width: 1px;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      to bottom,
+      transparent,
+      rgba(203, 228, 209, 0.28),
+      transparent
+    );
+}
+
+.formation-record-marker span {
+  position: absolute;
+
+  right: 1px;
+
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(224, 241, 227, 0.82);
+
+  box-shadow:
+    0 0 16px rgba(190, 226, 199, 0.5);
+}
+
+
+/* ============================================================
+   LARGE NUMBER
+   ============================================================ */
+
+.formation-scene-large-number {
+  position: absolute;
+
+  z-index: 4;
+
+  right: 6vw;
+  bottom: 7vh;
+
+  font-size:
+    clamp(130px, 19vw, 300px);
+
+  line-height: 0.7;
+
+  font-weight: 700;
+
+  letter-spacing: -0.11em;
+
+  color: transparent;
+
+  -webkit-text-stroke:
+    1px rgba(215, 231, 219, 0.1);
+
+  opacity: 0;
+
+  pointer-events: none;
+}
+
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+.formation-scene-footer {
+  position: absolute;
+
+  z-index: 40;
+
+  left: 8vw;
+  right: 8vw;
+  bottom: 30px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  font-size: 7px;
+  font-weight: 700;
+
+  letter-spacing: 0.2em;
+
+  color:
+    rgba(211, 227, 216, 0.3);
+
+  opacity: 0;
+}
+
+
+/* ============================================================
+   ORIGIN
+   ============================================================ */
+
+.formation-scene-origin
+  .formation-records {
+  width: min(800px, 65vw);
+
+  top: 48%;
+}
+
+.formation-scene-origin
+  .formation-record {
+  min-height: 150px;
+
+  grid-template-columns:
+    58px
+    130px
+    minmax(0, 1fr)
+    35px;
+
+  padding:
+    28px
+    30px;
+}
+
+.formation-scene-origin
+  .formation-record-year {
+  font-size:
+    clamp(34px, 4vw, 58px);
+}
+
+.formation-scene-origin
+  .formation-record-degree {
+  font-size:
+    clamp(19px, 1.9vw, 29px);
+}
+
+
+/* ============================================================
+   FOUNDATION
+   CORRECCIÓN: TARJETAS MÁS ANCHAS
+   ============================================================ */
+
+.formation-scene-foundation
+  .formation-records {
+  width: min(1180px, 84vw);
+
+  top: 47%;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1fr);
+
+  gap: 34px;
+}
+
+.formation-scene-foundation
+  .formation-record {
+  min-height: 205px;
+
+  display: grid;
+
+  grid-template-columns:
+    48px
+    125px
+    minmax(0, 1fr);
+
+  align-items: start;
+
+  padding:
+    30px
+    34px;
+}
+
+.formation-scene-foundation
+  .formation-record-index {
+  padding-top: 4px;
+}
+
+.formation-scene-foundation
+  .formation-record-year {
+  font-size:
+    clamp(32px, 3.4vw, 50px);
+
+  white-space: nowrap;
+
+  padding-top: 1px;
+}
+
+.formation-scene-foundation
+  .formation-record-body {
+  min-width: 0;
+
+  padding-left: 4px;
+}
+
+.formation-scene-foundation
+  .formation-record-degree {
+  font-size:
+    clamp(20px, 2vw, 30px);
+
+  line-height: 1.1;
+
+  white-space: nowrap;
+}
+
+.formation-scene-foundation
+  .formation-record-institution {
+  margin-top: 18px;
+
+  max-width: 330px;
+
+  font-size:
+    clamp(11px, 0.95vw, 14px);
+
+  line-height: 1.4;
+}
+
+.formation-scene-foundation
+  .formation-record-meta {
+  margin-top: 9px;
+}
+
+.formation-scene-foundation
+  .formation-record-marker {
+  display: none;
+}
+
+
+/* ============================================================
+   FISCAL
+   ============================================================ */
+
+.formation-scene-fiscal
+  .formation-records {
+  width: min(1160px, 84vw);
+
+  top: 47%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 16px;
+}
+
+.formation-scene-fiscal
+  .formation-record {
+  display: block;
+
+  min-height: 220px;
+
+  padding: 25px;
+}
+
+.formation-scene-fiscal
+  .formation-record-index {
+  margin-bottom: 22px;
+}
+
+.formation-scene-fiscal
+  .formation-record-year {
+  margin-bottom: 22px;
+
+  font-size:
+    clamp(30px, 3vw, 46px);
+}
+
+.formation-scene-fiscal
+  .formation-record-degree {
+  font-size:
+    clamp(18px, 1.6vw, 24px);
+}
+
+.formation-scene-fiscal
+  .formation-record-institution {
+  margin-top: 20px;
+}
+
+.formation-scene-fiscal
+  .formation-record-marker {
+  position: absolute;
+
+  right: 25px;
+  top: 25px;
+}
+
+
+/* ============================================================
+   EXPANSION
+   ============================================================ */
+
+.formation-scene-expansion
+  .formation-records {
+  width: min(1180px, 84vw);
+
+  top: 47%;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 18px;
+}
+
+.formation-scene-expansion
+  .formation-record {
+  display: block;
+
+  min-height: 230px;
+
+  padding: 26px;
+}
+
+.formation-scene-expansion
+  .formation-record-index {
+  margin-bottom: 24px;
+}
+
+.formation-scene-expansion
+  .formation-record-year {
+  margin-bottom: 18px;
+
+  font-size:
+    clamp(31px, 3.2vw, 48px);
+}
+
+.formation-scene-expansion
+  .formation-record-degree {
+  font-size:
+    clamp(17px, 1.55vw, 23px);
+}
+
+.formation-scene-expansion
+  .formation-record-institution {
+  margin-top: 20px;
+}
+
+.formation-scene-expansion
+  .formation-record-marker {
+  position: absolute;
+
+  right: 26px;
+  top: 26px;
+}
+
+
+/* ============================================================
+   SOFTWARE
+   ============================================================ */
+
+.formation-scene-software {
+  background:
+    radial-gradient(
+      circle at 50% 47%,
+      rgba(64, 105, 74, 0.11),
+      transparent 34%
+    );
+}
+
+.formation-scene-software
+  .formation-scene-title {
+  top: 13%;
+}
+
+.formation-scene-software
+  .formation-records {
+  width: min(1080px, 78vw);
+
+  top: 48%;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1fr);
+
+  gap: 24px;
+}
+
+.formation-scene-software
+  .formation-record {
+  display: block;
+
+  min-height: 240px;
+
+  padding: 28px;
+}
+
+.formation-scene-software
+  .formation-record-index {
+  margin-bottom: 26px;
+}
+
+.formation-scene-software
+  .formation-record-year {
+  margin-bottom: 20px;
+
+  font-size:
+    clamp(34px, 3.4vw, 52px);
+}
+
+.formation-scene-software
+  .formation-record-degree {
+  font-size:
+    clamp(20px, 2vw, 30px);
+}
+
+.formation-scene-software
+  .formation-record-specialty {
+  font-size:
+    clamp(13px, 1.3vw, 18px);
+}
+
+.formation-scene-software
+  .formation-record-marker {
+  position: absolute;
+
+  right: 28px;
+  top: 28px;
+}
+
+
+/* ============================================================
+   BOTTOM
+   ============================================================ */
+
+.formation-bottom {
+  position: absolute;
+
+  z-index: 80;
+
+  left: 50%;
+  bottom: 25px;
+
+  transform: translateX(-50%);
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  font-size: 7px;
+  font-weight: 700;
+
+  letter-spacing: 0.22em;
+
+  color:
+    rgba(215, 229, 219, 0.3);
+
+  white-space: nowrap;
+}
+
+.formation-bottom-line {
+  width: 38px;
+  height: 1px;
+
+  overflow: hidden;
+
+  background:
+    rgba(210, 229, 214, 0.12);
+}
+
+.formation-bottom-line span {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  background:
+    rgba(216, 237, 221, 0.5);
+
+  animation:
+    formation-bottom-pulse
+    2.5s
+    ease-in-out
+    infinite;
+}
+
+@keyframes formation-bottom-pulse {
+  0%,
+  100% {
+    transform: translateX(-100%);
+  }
+
+  50% {
+    transform: translateX(100%);
+  }
+}
+
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 1000px) {
+
+  .formation-topbar {
+    left: 25px;
+    right: 25px;
+  }
+
+  .formation-progress {
+    right: 18px;
+  }
+
+  .formation-scene-header {
+    left: 6vw;
+    right: 6vw;
+  }
+
+  .formation-scene-title {
+    width: 80vw;
+  }
+
+  .formation-scene-origin
+    .formation-records,
+  .formation-scene-foundation
+    .formation-records,
+  .formation-scene-fiscal
+    .formation-records,
+  .formation-scene-expansion
+    .formation-records,
+  .formation-scene-software
+    .formation-records {
+    width: 78vw;
+  }
+
+  .formation-scene-foundation
+    .formation-records {
+    gap: 18px;
+  }
+
+  .formation-scene-foundation
+    .formation-record {
+    grid-template-columns:
+      38px
+      100px
+      minmax(0, 1fr);
+
+    padding:
+      24px
+      22px;
+  }
+
+  .formation-scene-foundation
+    .formation-record-degree {
+    white-space: normal;
+  }
+
+  .formation-scene-fiscal
+    .formation-records,
+  .formation-scene-expansion
+    .formation-records {
+    gap: 10px;
+  }
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 700px) {
+
+  .formation {
+    min-height: 1100vh;
+  }
+
+  .formation-sticky {
+    min-height: 620px;
+  }
+
+  .formation-topbar {
+    top: 20px;
+
+    left: 18px;
+    right: 18px;
+
+    font-size: 6px;
+
+    letter-spacing: 0.14em;
+  }
+
+  .formation-topbar > div {
+    gap: 8px;
+  }
+
+  .formation-topbar > div:nth-child(2) {
+    display: none;
+  }
+
+  .formation-progress {
+    display: none;
+  }
+
+  .formation-scene-header {
+    top: 68px;
+
+    left: 7vw;
+    right: 7vw;
+  }
+
+  .formation-scene-label {
+    font-size: 7px;
+
+    letter-spacing: 0.14em;
+  }
+
+  .formation-scene-period {
+    font-size: 7px;
+
+    letter-spacing: 0.12em;
+  }
+
+  .formation-scene-title {
+    top: 14%;
+
+    width: 84vw;
+  }
+
+  .formation-scene-kicker {
+    margin-bottom: 12px;
+
+    font-size: 7px;
+
+    letter-spacing: 0.25em;
+  }
+
+  .formation-scene-title h2 {
+    font-size:
+      clamp(40px, 12vw, 70px);
+  }
+
+  .formation-scene-title p {
+    margin-top: 12px;
+
+    font-size: 7px;
+
+    line-height: 1.6;
+
+    letter-spacing: 0.12em;
+  }
+
+
+  /* ----------------------------------------------------------
+     MOBILE RECORDS
+     ---------------------------------------------------------- */
+
+  .formation-records,
+  .formation-scene-origin
+    .formation-records,
+  .formation-scene-foundation
+    .formation-records,
+  .formation-scene-fiscal
+    .formation-records,
+  .formation-scene-expansion
+    .formation-records,
+  .formation-scene-software
+    .formation-records {
+    top: 41%;
+
+    left: 50%;
+
+    width: 82vw;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 9px;
+  }
+
+  .formation-record,
+  .formation-scene-origin
+    .formation-record,
+  .formation-scene-foundation
+    .formation-record,
+  .formation-scene-fiscal
+    .formation-record,
+  .formation-scene-expansion
+    .formation-record,
+  .formation-scene-software
+    .formation-record {
+    display: grid;
+
+    grid-template-columns:
+      30px
+      72px
+      minmax(0, 1fr);
+
+    min-height: 108px;
+
+    padding: 15px;
+
+    gap: 0;
+  }
+
+  .formation-scene-origin
+    .formation-record {
+    min-height: 125px;
+  }
+
+  .formation-record-index {
+    grid-column: 1;
+    grid-row: 1;
+
+    font-size: 7px;
+  }
+
+  .formation-record-year {
+    grid-column: 2;
+    grid-row: 1;
+
+    min-width: 0;
+
+    font-size: 23px;
+
+    white-space: nowrap;
+
+    align-self: start;
+  }
+
+  .formation-record-body {
+    grid-column: 3;
+    grid-row: 1;
+
+    min-width: 0;
+
+    padding-left: 8px;
+  }
+
+  .formation-record-degree {
+    font-size: 13px;
+
+    white-space: normal;
+  }
+
+  .formation-record-specialty {
+    font-size: 9px;
+  }
+
+  .formation-record-institution {
+    margin-top: 7px;
+
+    font-size: 8px;
+  }
+
+  .formation-record-meta {
+    margin-top: 5px;
+
+    font-size: 6px;
+
+    letter-spacing: 0.08em;
+  }
+
+  .formation-record-marker {
+    display: none;
+  }
+
+
+  /* ----------------------------------------------------------
+     MOBILE FOUNDATION
+     ---------------------------------------------------------- */
+
+  .formation-scene-foundation
+    .formation-records {
+    top: 40%;
+
+    gap: 10px;
+  }
+
+  .formation-scene-foundation
+    .formation-record {
+    grid-template-columns:
+      28px
+      72px
+      minmax(0, 1fr);
+
+    min-height: 112px;
+
+    padding:
+      15px
+      14px;
+  }
+
+  .formation-scene-foundation
+    .formation-record-year {
+    font-size: 21px;
+
+    white-space: nowrap;
+  }
+
+  .formation-scene-foundation
+    .formation-record-degree {
+    font-size: 12px;
+
+    line-height: 1.15;
+
+    white-space: normal;
+  }
+
+  .formation-scene-foundation
+    .formation-record-institution {
+    margin-top: 7px;
+
+    max-width: none;
+
+    font-size: 7px;
+  }
+
+
+  /* ----------------------------------------------------------
+     MOBILE OTHER
+     ---------------------------------------------------------- */
+
+  .formation-scene-large-number {
+    right: 4vw;
+    bottom: 7vh;
+
+    font-size: 28vw;
+  }
+
+  .formation-scene-footer {
+    left: 7vw;
+    right: 7vw;
+    bottom: 19px;
+
+    font-size: 5px;
+
+    letter-spacing: 0.1em;
+  }
+
+  .formation-scene-footer span:last-child {
+    display: none;
+  }
+
+  .formation-bottom {
+    display: none;
+  }
+
+  .formation-background-grid {
+    opacity: 0.13;
+  }
+
+  .formation-svg {
+    opacity: 0.65;
+  }
+
+  .formation-horizontal-line {
+    left: 0;
+
+    width: 100%;
+  }
+
+  .formation-vertical-line {
+    display: none;
+  }
+
+  .formation-glow {
+    width: 55vw;
+    height: 55vw;
+
+    filter: blur(55px);
+  }
+}
+
+
+/* ============================================================
+   VERY SMALL DEVICES
+   ============================================================ */
+
+@media (max-width: 430px) {
+
+  .formation {
+    min-height: 1200vh;
+  }
+
+  .formation-scene-title {
+    top: 13%;
+  }
+
+  .formation-records {
+    top: 40%;
+  }
+
+  .formation-record,
+  .formation-scene-origin
+    .formation-record,
+  .formation-scene-foundation
+    .formation-record,
+  .formation-scene-fiscal
+    .formation-record,
+  .formation-scene-expansion
+    .formation-record,
+  .formation-scene-software
+    .formation-record {
+    min-height: 102px;
+
+    padding: 13px;
+  }
+
+  .formation-record-year {
+    font-size: 20px;
+
+    white-space: nowrap;
+  }
+
+  .formation-record-degree {
+    font-size: 12px;
+  }
+
+  .formation-record-specialty {
+    font-size: 8px;
+  }
+
+  .formation-record-institution {
+    font-size: 7px;
+  }
+
+  .formation-record-meta {
+    font-size: 5.5px;
+  }
+
+  .formation-scene-foundation
+    .formation-record {
+    grid-template-columns:
+      25px
+      68px
+      minmax(0, 1fr);
+
+    padding:
+      12px
+      11px;
+  }
+
+  .formation-scene-foundation
+    .formation-record-year {
+    font-size: 19px;
+
+    white-space: nowrap;
+  }
+
+  .formation-scene-foundation
+    .formation-record-degree {
+    font-size: 11px;
+  }
+}
+
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .formation {
+    min-height: auto;
+  }
+
+  .formation-sticky {
+    position: relative;
+
+    height: auto;
+
+    min-height: auto;
+
+    overflow: visible;
+  }
+
+  .formation-scenes {
+    position: relative;
+  }
+
+  .formation-scene {
+    position: relative;
+
+    inset: auto;
+
+    min-height: 100vh;
+
+    visibility: visible !important;
+  }
+
+  .formation-scene-title,
+  .formation-scene-header,
+  .formation-record,
+  .formation-scene-footer,
+  .formation-scene-large-number {
+    opacity: 1 !important;
+
+    transform:
+      none !important;
+  }
+
+  .formation-svg-path,
+  .formation-branch,
+  .formation-fiscal-axis,
+  .formation-fiscal-diagonal,
+  .formation-software-path {
+    stroke-dashoffset: 0 !important;
+
+    opacity: 1 !important;
+  }
+
+  .formation-svg-node,
+  .formation-expansion-node,
+  .formation-expansion-core,
+  .formation-software-core {
+    opacity: 1 !important;
+
+    transform:
+      scale(1) !important;
+  }
+
+  .formation-canvas,
+  .formation-scan {
+    display: none;
+  }
+
+  .formation-background-grid {
+    opacity: 0.08;
+  }
+
+  .formation-bottom,
+  .formation-progress {
+    display: none;
+  }
+}

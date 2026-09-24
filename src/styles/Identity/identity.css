@@ -1,0 +1,2672 @@
+/* ============================================================
+   IDENTITY
+   ESCENA 01 — THE SUBJECT
+   ============================================================ */
+
+.identity {
+  position: relative;
+
+  width: 100%;
+  height: 500vh;
+
+  overflow: clip;
+
+  background: #020403;
+  color: #f2f3ef;
+}
+
+
+/* ============================================================
+   STICKY
+   ============================================================ */
+
+.identity-sticky {
+  position: sticky;
+  top: 0;
+
+  width: 100%;
+  height: 100vh;
+
+  overflow: hidden;
+
+  background: #020403;
+
+  isolation: isolate;
+}
+
+
+/* ============================================================
+   SCENE
+   ============================================================ */
+
+.identity-scene {
+  position: absolute;
+  inset: 0;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      ellipse at 68% 42%,
+      rgba(108, 138, 119, 0.13),
+      transparent 30%
+    ),
+    #020403;
+
+  will-change: opacity;
+}
+
+
+/* ============================================================
+   WORLD
+   ============================================================ */
+
+.identity-world {
+  position: absolute;
+  inset: -5%;
+
+  z-index: 0;
+
+  transform-origin: center center;
+
+  will-change:
+    transform,
+    opacity;
+}
+
+
+/* ============================================================
+   ATMOSPHERE
+   ============================================================ */
+
+.identity-atmosphere {
+  position: absolute;
+  inset: -8%;
+
+  background:
+    radial-gradient(
+      ellipse at 72% 38%,
+      rgba(141, 174, 151, 0.2),
+      transparent 28%
+    ),
+    radial-gradient(
+      ellipse at 55% 65%,
+      rgba(44, 75, 56, 0.32),
+      transparent 40%
+    ),
+    radial-gradient(
+      ellipse at 15% 82%,
+      rgba(21, 48, 34, 0.5),
+      transparent 38%
+    ),
+    linear-gradient(
+      115deg,
+      #010202 0%,
+      #06100b 34%,
+      #0b1811 60%,
+      #020403 100%
+    );
+
+  filter:
+    blur(0.4px)
+    brightness(0.92);
+
+  will-change:
+    transform,
+    opacity;
+}
+
+
+/* ============================================================
+   FOREST LAYERS
+   ============================================================ */
+
+.identity-forest {
+  position: absolute;
+  inset: -10%;
+
+  pointer-events: none;
+
+  will-change:
+    transform,
+    opacity;
+}
+
+.identity-forest-back {
+  opacity: 0.7;
+
+  background:
+    radial-gradient(
+      ellipse at 25% 50%,
+      transparent 0 12%,
+      rgba(10, 31, 20, 0.5) 13%,
+      transparent 31%
+    ),
+    radial-gradient(
+      ellipse at 58% 46%,
+      transparent 0 14%,
+      rgba(15, 38, 25, 0.55) 15%,
+      transparent 34%
+    ),
+    linear-gradient(
+      180deg,
+      transparent 25%,
+      rgba(2, 13, 8, 0.72) 80%,
+      rgba(1, 6, 4, 0.94)
+    );
+
+  filter: blur(8px);
+}
+
+.identity-forest-mid {
+  opacity: 0.78;
+
+  background:
+    linear-gradient(
+      108deg,
+      transparent 0 18%,
+      rgba(1, 10, 6, 0.8) 18.4% 20%,
+      transparent 20.5% 30%,
+      rgba(2, 14, 8, 0.68) 30.5% 33%,
+      transparent 33.5% 43%,
+      rgba(2, 11, 7, 0.76) 43.5% 46%,
+      transparent 46.5%
+    ),
+    linear-gradient(
+      75deg,
+      transparent 0 54%,
+      rgba(2, 15, 9, 0.75) 54.5% 57%,
+      transparent 57.5% 70%,
+      rgba(1, 10, 6, 0.8) 70.5% 73%,
+      transparent 73.5%
+    );
+
+  filter: blur(3px);
+}
+
+.identity-forest-front {
+  opacity: 0.7;
+
+  background:
+    linear-gradient(
+      105deg,
+      transparent 0 9%,
+      rgba(0, 7, 4, 0.95) 9.5% 13%,
+      transparent 13.5% 25%,
+      rgba(0, 8, 4, 0.94) 25.5% 29%,
+      transparent 29.5% 48%,
+      rgba(0, 7, 4, 0.9) 48.5% 52%,
+      transparent 52.5% 68%,
+      rgba(0, 8, 4, 0.92) 68.5% 73%,
+      transparent 73.5%
+    ),
+    linear-gradient(
+      180deg,
+      transparent 35%,
+      rgba(0, 8, 4, 0.55) 75%,
+      rgba(0, 4, 2, 0.94) 100%
+    );
+
+  filter: blur(1px);
+}
+
+
+/* ============================================================
+   LIGHT
+   ============================================================ */
+
+.identity-light {
+  position: absolute;
+  inset: -30% -20%;
+
+  background:
+    radial-gradient(
+      ellipse at 72% 42%,
+      rgba(205, 230, 210, 0.2),
+      transparent 30%
+    ),
+    radial-gradient(
+      ellipse at 56% 45%,
+      rgba(151, 193, 164, 0.11),
+      transparent 32%
+    ),
+    linear-gradient(
+      112deg,
+      transparent 30%,
+      rgba(202, 226, 208, 0.06) 45%,
+      rgba(210, 233, 215, 0.12) 49%,
+      transparent 56%
+    );
+
+  z-index: 3;
+
+  mix-blend-mode: screen;
+
+  filter: blur(18px);
+
+  will-change:
+    transform,
+    opacity;
+}
+
+
+/* ============================================================
+   LIGHT BEAM
+   ============================================================ */
+
+.identity-light-beam {
+  position: absolute;
+
+  top: -35%;
+  left: -30%;
+
+  width: 28%;
+  height: 170%;
+
+  z-index: 7;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(224, 239, 226, 0.08),
+      rgba(224, 239, 226, 0.16),
+      transparent
+    );
+
+  transform:
+    skewX(-18deg)
+    rotate(3deg);
+
+  filter: blur(20px);
+
+  mix-blend-mode: screen;
+
+  will-change:
+    transform,
+    opacity;
+}
+
+
+/* ============================================================
+   FLARE
+   ============================================================ */
+
+.identity-flare {
+  position: absolute;
+
+  left: 68%;
+  top: 37%;
+
+  width: 230px;
+  height: 230px;
+
+  z-index: 9;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(224, 239, 226, 0.24) 0%,
+      rgba(186, 220, 194, 0.1) 25%,
+      transparent 68%
+    );
+
+  filter: blur(5px);
+
+  mix-blend-mode: screen;
+
+  transform: translate(-50%, -50%);
+
+  will-change:
+    transform,
+    opacity;
+}
+
+
+/* ============================================================
+   PARTICLES
+   ============================================================ */
+
+.identity-particles {
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  z-index: 12;
+
+  will-change:
+    transform,
+    opacity;
+}
+
+.identity-particles span {
+  position: absolute;
+
+  display: block;
+
+  width: var(--size, 2px);
+  height: var(--size, 2px);
+
+  border-radius: 50%;
+
+  background: rgba(218, 235, 222, var(--alpha, 0.4));
+
+  box-shadow:
+    0 0 10px rgba(195, 226, 202, 0.35);
+
+  animation:
+    identity-particle
+    var(--duration, 12s)
+    ease-in-out
+    infinite;
+
+  animation-delay:
+    var(--delay, 0s);
+}
+
+.identity-particles-far span {
+  --size: 1px;
+  --alpha: 0.25;
+
+  left: calc(
+    (var(--i, 1) * 17%) % 100%
+  );
+
+  top: calc(
+    (var(--i, 1) * 29%) % 100%
+  );
+}
+
+.identity-particles-far span:nth-child(1) {
+  left: 7%;
+  top: 18%;
+  --duration: 18s;
+}
+
+.identity-particles-far span:nth-child(2) {
+  left: 14%;
+  top: 62%;
+  --duration: 15s;
+}
+
+.identity-particles-far span:nth-child(3) {
+  left: 23%;
+  top: 38%;
+  --duration: 21s;
+}
+
+.identity-particles-far span:nth-child(4) {
+  left: 31%;
+  top: 78%;
+  --duration: 17s;
+}
+
+.identity-particles-far span:nth-child(5) {
+  left: 39%;
+  top: 14%;
+  --duration: 19s;
+}
+
+.identity-particles-far span:nth-child(6) {
+  left: 47%;
+  top: 52%;
+  --duration: 16s;
+}
+
+.identity-particles-far span:nth-child(7) {
+  left: 55%;
+  top: 83%;
+  --duration: 22s;
+}
+
+.identity-particles-far span:nth-child(8) {
+  left: 63%;
+  top: 25%;
+  --duration: 17s;
+}
+
+.identity-particles-far span:nth-child(9) {
+  left: 71%;
+  top: 68%;
+  --duration: 20s;
+}
+
+.identity-particles-far span:nth-child(10) {
+  left: 79%;
+  top: 11%;
+  --duration: 18s;
+}
+
+.identity-particles-far span:nth-child(11) {
+  left: 87%;
+  top: 45%;
+  --duration: 16s;
+}
+
+.identity-particles-far span:nth-child(12) {
+  left: 94%;
+  top: 77%;
+  --duration: 21s;
+}
+
+.identity-particles-far span:nth-child(13) {
+  left: 18%;
+  top: 89%;
+  --duration: 19s;
+}
+
+.identity-particles-far span:nth-child(14) {
+  left: 43%;
+  top: 31%;
+  --duration: 17s;
+}
+
+.identity-particles-far span:nth-child(15) {
+  left: 68%;
+  top: 91%;
+  --duration: 20s;
+}
+
+.identity-particles-far span:nth-child(16) {
+  left: 84%;
+  top: 57%;
+  --duration: 18s;
+}
+
+.identity-particles-far span:nth-child(17) {
+  left: 4%;
+  top: 42%;
+  --duration: 22s;
+}
+
+.identity-particles-far span:nth-child(18) {
+  left: 26%;
+  top: 8%;
+  --duration: 17s;
+}
+
+.identity-particles-far span:nth-child(19) {
+  left: 52%;
+  top: 7%;
+  --duration: 20s;
+}
+
+.identity-particles-far span:nth-child(20) {
+  left: 76%;
+  top: 33%;
+  --duration: 16s;
+}
+
+.identity-particles-far span:nth-child(21) {
+  left: 96%;
+  top: 24%;
+  --duration: 19s;
+}
+
+.identity-particles-far span:nth-child(22) {
+  left: 11%;
+  top: 94%;
+  --duration: 21s;
+}
+
+.identity-particles-far span:nth-child(23) {
+  left: 36%;
+  top: 60%;
+  --duration: 18s;
+}
+
+.identity-particles-far span:nth-child(24) {
+  left: 59%;
+  top: 74%;
+  --duration: 22s;
+}
+
+.identity-particles-far span:nth-child(25) {
+  left: 73%;
+  top: 4%;
+  --duration: 17s;
+}
+
+.identity-particles-far span:nth-child(26) {
+  left: 89%;
+  top: 88%;
+  --duration: 20s;
+}
+
+.identity-particles-far span:nth-child(27) {
+  left: 48%;
+  top: 95%;
+  --duration: 19s;
+}
+
+.identity-particles-far span:nth-child(28) {
+  left: 65%;
+  top: 48%;
+  --duration: 16s;
+}
+
+.identity-particles-mid span {
+  --size: 2px;
+  --alpha: 0.46;
+}
+
+.identity-particles-mid span:nth-child(1) {
+  left: 5%;
+  top: 74%;
+}
+
+.identity-particles-mid span:nth-child(2) {
+  left: 12%;
+  top: 29%;
+}
+
+.identity-particles-mid span:nth-child(3) {
+  left: 20%;
+  top: 51%;
+}
+
+.identity-particles-mid span:nth-child(4) {
+  left: 28%;
+  top: 17%;
+}
+
+.identity-particles-mid span:nth-child(5) {
+  left: 35%;
+  top: 84%;
+}
+
+.identity-particles-mid span:nth-child(6) {
+  left: 42%;
+  top: 41%;
+}
+
+.identity-particles-mid span:nth-child(7) {
+  left: 49%;
+  top: 67%;
+}
+
+.identity-particles-mid span:nth-child(8) {
+  left: 57%;
+  top: 22%;
+}
+
+.identity-particles-mid span:nth-child(9) {
+  left: 64%;
+  top: 79%;
+}
+
+.identity-particles-mid span:nth-child(10) {
+  left: 70%;
+  top: 36%;
+}
+
+.identity-particles-mid span:nth-child(11) {
+  left: 77%;
+  top: 61%;
+}
+
+.identity-particles-mid span:nth-child(12) {
+  left: 83%;
+  top: 16%;
+}
+
+.identity-particles-mid span:nth-child(13) {
+  left: 90%;
+  top: 46%;
+}
+
+.identity-particles-mid span:nth-child(14) {
+  left: 96%;
+  top: 71%;
+}
+
+.identity-particles-mid span:nth-child(15) {
+  left: 17%;
+  top: 91%;
+}
+
+.identity-particles-mid span:nth-child(16) {
+  left: 33%;
+  top: 9%;
+}
+
+.identity-particles-mid span:nth-child(17) {
+  left: 54%;
+  top: 89%;
+}
+
+.identity-particles-mid span:nth-child(18) {
+  left: 69%;
+  top: 6%;
+}
+
+.identity-particles-mid span:nth-child(19) {
+  left: 81%;
+  top: 86%;
+}
+
+.identity-particles-mid span:nth-child(20) {
+  left: 92%;
+  top: 26%;
+}
+
+.identity-particles-mid span:nth-child(21) {
+  left: 46%;
+  top: 57%;
+}
+
+.identity-particles-mid span:nth-child(22) {
+  left: 61%;
+  top: 47%;
+}
+
+.identity-particles-near span {
+  --size: 3px;
+  --alpha: 0.58;
+}
+
+.identity-particles-near span:nth-child(1) {
+  left: 9%;
+  top: 44%;
+}
+
+.identity-particles-near span:nth-child(2) {
+  left: 18%;
+  top: 70%;
+}
+
+.identity-particles-near span:nth-child(3) {
+  left: 29%;
+  top: 27%;
+}
+
+.identity-particles-near span:nth-child(4) {
+  left: 41%;
+  top: 78%;
+}
+
+.identity-particles-near span:nth-child(5) {
+  left: 52%;
+  top: 34%;
+}
+
+.identity-particles-near span:nth-child(6) {
+  left: 63%;
+  top: 72%;
+}
+
+.identity-particles-near span:nth-child(7) {
+  left: 74%;
+  top: 22%;
+}
+
+.identity-particles-near span:nth-child(8) {
+  left: 86%;
+  top: 58%;
+}
+
+.identity-particles-near span:nth-child(9) {
+  left: 95%;
+  top: 36%;
+}
+
+.identity-particles-near span:nth-child(10) {
+  left: 14%;
+  top: 13%;
+}
+
+.identity-particles-near span:nth-child(11) {
+  left: 34%;
+  top: 53%;
+}
+
+.identity-particles-near span:nth-child(12) {
+  left: 57%;
+  top: 13%;
+}
+
+.identity-particles-near span:nth-child(13) {
+  left: 71%;
+  top: 92%;
+}
+
+.identity-particles-near span:nth-child(14) {
+  left: 82%;
+  top: 43%;
+}
+
+.identity-particles-near span:nth-child(15) {
+  left: 47%;
+  top: 91%;
+}
+
+.identity-particles-near span:nth-child(16) {
+  left: 91%;
+  top: 82%;
+}
+
+@keyframes identity-particle {
+  0% {
+    transform:
+      translate3d(0, 35px, 0)
+      scale(0.4);
+
+    opacity: 0;
+  }
+
+  22% {
+    opacity: 0.6;
+  }
+
+  52% {
+    transform:
+      translate3d(18px, -25px, 0)
+      scale(1);
+  }
+
+  78% {
+    opacity: 0.25;
+  }
+
+  100% {
+    transform:
+      translate3d(-18px, -90px, 0)
+      scale(0.3);
+
+    opacity: 0;
+  }
+}
+
+
+/* ============================================================
+   IMAGE GLOW
+   ============================================================ */
+
+.identity-image-glow {
+  position: absolute;
+
+  right: 8%;
+  top: 17%;
+
+  width: 48vw;
+  height: 72vh;
+
+  z-index: 13;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      ellipse,
+      rgba(157, 197, 168, 0.22),
+      rgba(88, 127, 100, 0.09) 35%,
+      transparent 70%
+    );
+
+  filter: blur(32px);
+
+  mix-blend-mode: screen;
+
+  transform-origin: center;
+
+  will-change:
+    transform,
+    opacity;
+}
+
+
+/* ============================================================
+   IMAGE
+   ============================================================ */
+
+.identity-image-wrap {
+  position: absolute;
+
+  right: 1%;
+  top: -2%;
+
+  width: min(66vw, 1050px);
+  height: 104vh;
+
+  z-index: 14;
+
+  overflow: hidden;
+
+  transform-origin: center center;
+
+  will-change:
+    transform,
+    opacity;
+}
+
+.identity-image {
+  position: absolute;
+  inset: -6%;
+
+  width: 112%;
+  height: 112%;
+
+  will-change:
+    transform,
+    opacity;
+}
+
+.identity-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center center;
+
+  filter:
+    grayscale(100%)
+    contrast(1.16)
+    brightness(0.78);
+
+  will-change:
+    transform,
+    filter;
+}
+
+.identity-image-mask {
+  position: absolute;
+  inset: 0;
+
+  z-index: 3;
+
+  background: #020403;
+
+  transform-origin: right center;
+
+  will-change: transform;
+}
+
+.identity-image-light {
+  position: absolute;
+  right: 3%;
+  top: 5%;
+
+  width: 62vw;
+  height: 100vh;
+
+  z-index: 16;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(2, 4, 3, 0.95),
+      rgba(2, 4, 3, 0.5) 28%,
+      transparent 65%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.03),
+      transparent 35%,
+      rgba(0, 0, 0, 0.5)
+    );
+
+  mix-blend-mode: normal;
+}
+
+.identity-image-vignette {
+  position: absolute;
+  inset: 0;
+
+  z-index: 19;
+
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      ellipse at 67% 43%,
+      transparent 18%,
+      rgba(0, 0, 0, 0.08) 45%,
+      rgba(0, 0, 0, 0.58) 100%
+    );
+}
+
+
+/* ============================================================
+   ORBITS
+   ============================================================ */
+
+.identity-orbit {
+  position: absolute;
+
+  left: 63%;
+  top: 48%;
+
+  width: min(48vw, 720px);
+  aspect-ratio: 1;
+
+  z-index: 20;
+
+  transform:
+    translate(-50%, -50%);
+
+  pointer-events: none;
+
+  will-change:
+    transform,
+    opacity;
+}
+
+.identity-orbit-outer,
+.identity-orbit-inner,
+.identity-orbit-fragments {
+  position: absolute;
+  inset: 0;
+
+  border-radius: 50%;
+
+  will-change: transform;
+}
+
+.identity-orbit-outer {
+  border:
+    1px solid rgba(193, 220, 200, 0.16);
+
+  transform:
+    rotate(18deg)
+    scaleY(0.31);
+}
+
+.identity-orbit-outer::before,
+.identity-orbit-outer::after {
+  content: "";
+
+  position: absolute;
+
+  border-radius: 50%;
+
+  border:
+    1px solid rgba(193, 220, 200, 0.08);
+}
+
+.identity-orbit-outer::before {
+  inset: 9%;
+
+  transform: rotate(32deg);
+}
+
+.identity-orbit-outer::after {
+  inset: 18%;
+
+  transform: rotate(-22deg);
+}
+
+.identity-orbit-outer span {
+  position: absolute;
+
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(205, 229, 211, 0.8);
+
+  box-shadow:
+    0 0 14px rgba(194, 227, 201, 0.8);
+}
+
+.identity-orbit-outer span:nth-child(1) {
+  left: 11%;
+  top: 45%;
+}
+
+.identity-orbit-outer span:nth-child(2) {
+  right: 13%;
+  top: 33%;
+}
+
+.identity-orbit-outer span:nth-child(3) {
+  left: 42%;
+  bottom: 4%;
+}
+
+.identity-orbit-outer span:nth-child(4) {
+  right: 26%;
+  bottom: 14%;
+}
+
+.identity-orbit-inner {
+  inset: 14%;
+
+  border:
+    1px solid rgba(203, 227, 209, 0.13);
+
+  transform:
+    rotate(-23deg)
+    scaleY(0.52);
+}
+
+.identity-orbit-inner span {
+  position: absolute;
+
+  width: 4px;
+  height: 4px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(211, 232, 216, 0.72);
+
+  box-shadow:
+    0 0 11px rgba(194, 227, 201, 0.6);
+}
+
+.identity-orbit-inner span:nth-child(1) {
+  left: 18%;
+  top: 18%;
+}
+
+.identity-orbit-inner span:nth-child(2) {
+  right: 9%;
+  top: 52%;
+}
+
+.identity-orbit-inner span:nth-child(3) {
+  left: 51%;
+  bottom: 3%;
+}
+
+.identity-orbit-fragments {
+  inset: 4%;
+
+  transform:
+    rotate(16deg)
+    scaleY(0.37);
+}
+
+.identity-orbit-fragments i {
+  position: absolute;
+
+  display: block;
+
+  width: 34px;
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(202, 228, 209, 0.55),
+      transparent
+    );
+}
+
+.identity-orbit-fragments i:nth-child(1) {
+  left: 5%;
+  top: 28%;
+  transform: rotate(18deg);
+}
+
+.identity-orbit-fragments i:nth-child(2) {
+  right: 5%;
+  top: 21%;
+  transform: rotate(-28deg);
+}
+
+.identity-orbit-fragments i:nth-child(3) {
+  left: 22%;
+  bottom: 11%;
+  transform: rotate(-11deg);
+}
+
+.identity-orbit-fragments i:nth-child(4) {
+  right: 17%;
+  bottom: 18%;
+  transform: rotate(27deg);
+}
+
+.identity-orbit-fragments i:nth-child(5) {
+  left: 47%;
+  top: 1%;
+  transform: rotate(90deg);
+}
+
+.identity-orbit-fragments i:nth-child(6) {
+  right: 35%;
+  bottom: 2%;
+  transform: rotate(90deg);
+}
+
+
+/* ============================================================
+   FRAGMENTS
+   ============================================================ */
+
+.identity-fragments {
+  position: absolute;
+  inset: 0;
+
+  z-index: 24;
+
+  pointer-events: none;
+
+  will-change:
+    transform,
+    opacity;
+}
+
+.fragment {
+  position: absolute;
+
+  display: block;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(205, 228, 211, 0.5),
+      transparent
+    );
+
+  transform-origin: left center;
+}
+
+.fragment-1 {
+  width: 160px;
+  top: 18%;
+  left: 48%;
+  transform: rotate(-22deg);
+}
+
+.fragment-2 {
+  width: 110px;
+  top: 29%;
+  right: 6%;
+  transform: rotate(35deg);
+}
+
+.fragment-3 {
+  width: 190px;
+  top: 67%;
+  left: 35%;
+  transform: rotate(13deg);
+}
+
+.fragment-4 {
+  width: 90px;
+  top: 77%;
+  right: 19%;
+  transform: rotate(-28deg);
+}
+
+.fragment-5 {
+  width: 120px;
+  top: 38%;
+  left: 7%;
+  transform: rotate(-7deg);
+}
+
+.fragment-6 {
+  width: 70px;
+  top: 53%;
+  left: 24%;
+  transform: rotate(43deg);
+}
+
+.fragment-7 {
+  width: 140px;
+  top: 13%;
+  right: 25%;
+  transform: rotate(12deg);
+}
+
+.fragment-8 {
+  width: 105px;
+  bottom: 17%;
+  left: 12%;
+  transform: rotate(-31deg);
+}
+
+
+/* ============================================================
+   ENERGY
+   ============================================================ */
+
+.identity-energy {
+  position: absolute;
+  inset: 0;
+
+  z-index: 25;
+
+  pointer-events: none;
+
+  overflow: hidden;
+
+  will-change:
+    transform,
+    opacity;
+}
+
+.identity-energy span {
+  position: absolute;
+
+  display: block;
+
+  width: 1px;
+  height: 160px;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent,
+      rgba(199, 226, 205, 0.4),
+      transparent
+    );
+
+  transform-origin: center;
+}
+
+.identity-energy span:nth-child(1) {
+  left: 22%;
+  top: 10%;
+  transform: rotate(27deg);
+}
+
+.identity-energy span:nth-child(2) {
+  left: 78%;
+  top: 42%;
+  height: 220px;
+  transform: rotate(-31deg);
+}
+
+.identity-energy span:nth-child(3) {
+  left: 54%;
+  bottom: 2%;
+  height: 190px;
+  transform: rotate(12deg);
+}
+
+
+/* ============================================================
+   GRID
+   ============================================================ */
+
+.identity-grid {
+  position: absolute;
+  inset: 0;
+
+  z-index: 18;
+
+  pointer-events: none;
+
+  opacity: 0.12;
+
+  background-image:
+    linear-gradient(
+      rgba(210, 230, 216, 0.04) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(210, 230, 216, 0.04) 1px,
+      transparent 1px
+    );
+
+  background-size:
+    100px 100px;
+
+  mask-image:
+    linear-gradient(
+      90deg,
+      transparent,
+      black 25%,
+      black 75%,
+      transparent
+    );
+}
+
+
+/* ============================================================
+   CONTENT
+   ============================================================ */
+
+.identity-content {
+  position: absolute;
+  inset: 0;
+
+  z-index: 30;
+
+  pointer-events: none;
+}
+
+
+/* ============================================================
+   CHAPTER
+   ============================================================ */
+
+.identity-chapter {
+  position: absolute;
+
+  top: 52px;
+  left: 52px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  letter-spacing: 0.25em;
+
+  text-transform: uppercase;
+
+  color: rgba(240, 242, 237, 0.76);
+
+  text-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.7);
+
+  will-change:
+    transform,
+    opacity;
+}
+
+.identity-chapter-number {
+  color: rgba(170, 207, 181, 0.9);
+}
+
+.identity-chapter-line {
+  width: 42px;
+  height: 1px;
+
+  background:
+    rgba(207, 228, 212, 0.55);
+
+  will-change: transform;
+}
+
+
+/* ============================================================
+   GIANT WORD
+   ============================================================ */
+
+.identity-giant-word {
+  position: absolute;
+
+  left: -2%;
+
+  z-index: 1;
+
+  font-size: clamp(
+    180px,
+    27vw,
+    500px
+  );
+
+  line-height: 0.7;
+
+  font-weight: 700;
+
+  letter-spacing: -0.1em;
+
+  white-space: nowrap;
+
+  pointer-events: none;
+
+  color:
+    rgba(228, 235, 229, 0.035);
+
+  -webkit-text-stroke:
+    1px rgba(217, 231, 220, 0.05);
+
+  will-change:
+    transform,
+    opacity;
+}
+
+.identity-giant-word-back {
+  top: 11%;
+
+  color:
+    rgba(157, 194, 168, 0.035);
+
+  -webkit-text-stroke:
+    1px rgba(185, 217, 193, 0.055);
+}
+
+.identity-giant-word:not(.identity-giant-word-back) {
+  bottom: 4%;
+}
+
+
+/* ============================================================
+   LEFT MARKER
+   ============================================================ */
+
+.identity-left-marker {
+  position: absolute;
+
+  left: 52px;
+  top: 37%;
+
+  z-index: 26;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  writing-mode: vertical-rl;
+
+  transform: rotate(180deg);
+
+  font-size: 7px;
+  font-weight: 600;
+
+  letter-spacing: 0.2em;
+
+  color: rgba(226, 235, 228, 0.38);
+
+  text-transform: uppercase;
+}
+
+.identity-left-marker i {
+  width: 1px;
+  height: 22px;
+
+  background:
+    rgba(184, 214, 192, 0.38);
+}
+
+
+/* ============================================================
+   NAME
+   ============================================================ */
+
+.identity-first-name,
+.identity-surname {
+  position: absolute;
+
+  z-index: 34;
+
+  font-size: clamp(
+    100px,
+    13vw,
+    220px
+  );
+
+  font-weight: 700;
+
+  line-height: 0.76;
+
+  letter-spacing: -0.09em;
+
+  white-space: nowrap;
+
+  text-shadow:
+    0 20px 55px rgba(0, 0, 0, 0.52);
+
+  will-change:
+    transform,
+    opacity;
+}
+
+.identity-first-name {
+  left: 48px;
+  bottom: 31%;
+
+  color: #f2f3ef;
+}
+
+.identity-surname {
+  left: 15%;
+  bottom: 19%;
+
+  color: rgba(240, 242, 237, 0.44);
+}
+
+
+/* ============================================================
+   NAME LINE
+   ============================================================ */
+
+.identity-name-line {
+  position: absolute;
+
+  left: 52px;
+  bottom: 16.5%;
+
+  width: min(600px, 42vw);
+  height: 1px;
+
+  z-index: 35;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(216, 231, 220, 0.75),
+      rgba(216, 231, 220, 0.2),
+      transparent
+    );
+
+  box-shadow:
+    0 0 20px rgba(192, 220, 199, 0.15);
+
+  will-change:
+    transform,
+    opacity;
+}
+
+
+/* ============================================================
+   ROLE
+   ============================================================ */
+
+.identity-role {
+  position: absolute;
+
+  left: 54px;
+  bottom: 12.4%;
+
+  z-index: 36;
+
+  display: flex;
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  max-width: 58vw;
+
+  font-size: 9px;
+  font-weight: 600;
+
+  letter-spacing: 0.2em;
+
+  line-height: 1.8;
+
+  text-transform: uppercase;
+
+  color: rgba(241, 243, 238, 0.7);
+
+  text-shadow:
+    0 4px 18px rgba(0, 0, 0, 0.8);
+
+  will-change:
+    transform,
+    opacity;
+}
+
+.identity-role i {
+  margin:
+    0 12px;
+
+  color:
+    rgba(168, 207, 179, 0.75);
+
+  font-style: normal;
+}
+
+
+/* ============================================================
+   EXPERIENCE
+   ============================================================ */
+
+.identity-experience {
+  position: absolute;
+
+  right: 8%;
+  bottom: 15%;
+
+  z-index: 38;
+
+  display: flex;
+  align-items: flex-end;
+
+  gap: 16px;
+
+  will-change:
+    transform,
+    opacity;
+}
+
+.identity-experience strong {
+  display: block;
+
+  font-size: clamp(
+    100px,
+    13vw,
+    220px
+  );
+
+  line-height: 0.68;
+
+  font-weight: 200;
+
+  letter-spacing: -0.09em;
+
+  color:
+    rgba(240, 243, 238, 0.86);
+
+  text-shadow:
+    0 15px 45px rgba(0, 0, 0, 0.5);
+
+  will-change:
+    transform,
+    opacity;
+}
+
+.identity-experience-label {
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+
+  padding-bottom: 8px;
+}
+
+.identity-experience-label span {
+  font-size: 8px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.22em;
+
+  text-transform: uppercase;
+
+  color:
+    rgba(239, 242, 237, 0.42);
+}
+
+.identity-experience-label span:first-child {
+  color:
+    rgba(174, 211, 183, 0.82);
+}
+
+
+/* ============================================================
+   SIDE DATA
+   ============================================================ */
+
+.identity-side-data {
+  position: absolute;
+
+  left: 48px;
+  top: 28%;
+
+  z-index: 36;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+
+  transform:
+    translateY(-50%);
+
+  font-size: 7px;
+
+  letter-spacing: 0.2em;
+
+  line-height: 1.5;
+
+  text-transform: uppercase;
+
+  color:
+    rgba(236, 241, 237, 0.34);
+
+  will-change:
+    transform,
+    opacity;
+}
+
+.identity-side-data strong {
+  font-size: 9px;
+
+  font-weight: 600;
+
+  color:
+    rgba(214, 229, 218, 0.58);
+}
+
+
+/* ============================================================
+   SIDE TOP
+   ============================================================ */
+
+.identity-side-top {
+  position: absolute;
+
+  right: 53px;
+  top: 53px;
+
+  z-index: 36;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-end;
+
+  gap: 5px;
+
+  font-size: 7px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.2em;
+
+  color:
+    rgba(228, 236, 230, 0.4);
+
+  will-change:
+    transform,
+    opacity;
+}
+
+.identity-side-top span:first-child {
+  color:
+    rgba(169, 207, 180, 0.76);
+}
+
+
+/* ============================================================
+   SIDE BOTTOM
+   ============================================================ */
+
+.identity-side-bottom {
+  position: absolute;
+
+  right: 52px;
+  bottom: 15%;
+
+  z-index: 36;
+
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  font-size: 7px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.2em;
+
+  color:
+    rgba(230, 236, 231, 0.34);
+
+  will-change:
+    transform,
+    opacity;
+}
+
+.identity-side-bottom i {
+  width: 40px;
+  height: 1px;
+
+  background:
+    rgba(191, 217, 198, 0.34);
+}
+
+
+/* ============================================================
+   TIMELINE
+   ============================================================ */
+
+.identity-timeline {
+  position: absolute;
+
+  left: 52px;
+  right: 52px;
+  bottom: 4.5%;
+
+  z-index: 39;
+
+  will-change:
+    transform,
+    opacity;
+}
+
+.identity-timeline-years {
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-bottom: 8px;
+
+  font-size: 7px;
+  font-weight: 600;
+
+  letter-spacing: 0.15em;
+
+  color:
+    rgba(233, 238, 234, 0.34);
+}
+
+.identity-timeline-track {
+  position: relative;
+
+  width: 100%;
+  height: 1px;
+}
+
+.identity-timeline-base,
+.identity-timeline-progress {
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  display: block;
+
+  width: 100%;
+  height: 1px;
+
+  transform-origin: left center;
+}
+
+.identity-timeline-base {
+  background:
+    rgba(215, 228, 218, 0.14);
+}
+
+.identity-timeline-progress {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(173, 208, 181, 0.72),
+      rgba(220, 233, 222, 0.52)
+    );
+
+  box-shadow:
+    0 0 10px rgba(174, 211, 183, 0.25);
+}
+
+.identity-timeline-marker {
+  position: absolute;
+
+  top: 50%;
+  left: 42%;
+
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(219, 235, 222, 0.95);
+
+  box-shadow:
+    0 0 0 3px rgba(172, 210, 181, 0.08),
+    0 0 18px rgba(181, 220, 190, 0.8);
+
+  transform:
+    translate(-50%, -50%);
+
+  will-change:
+    transform;
+}
+
+.identity-timeline-caption {
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-top: 9px;
+
+  font-size: 6px;
+  font-weight: 600;
+
+  letter-spacing: 0.2em;
+
+  color:
+    rgba(230, 237, 232, 0.25);
+
+  text-transform: uppercase;
+}
+
+
+/* ============================================================
+   SCROLL
+   ============================================================ */
+
+.identity-scroll {
+  position: absolute;
+
+  right: 48px;
+  top: 50%;
+
+  z-index: 40;
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  transform:
+    translateY(-50%)
+    rotate(90deg);
+
+  transform-origin: center;
+
+  font-size: 7px;
+  font-weight: 600;
+
+  letter-spacing: 0.25em;
+
+  text-transform: uppercase;
+
+  color:
+    rgba(235, 240, 236, 0.46);
+
+  will-change:
+    opacity,
+    transform;
+}
+
+.identity-scroll-line {
+  position: relative;
+
+  width: 65px;
+  height: 1px;
+
+  overflow: hidden;
+
+  background:
+    rgba(220, 232, 223, 0.16);
+}
+
+.identity-scroll-line i {
+  position: absolute;
+
+  left: -30%;
+  top: 0;
+
+  width: 30%;
+  height: 100%;
+
+  background:
+    rgba(220, 235, 224, 0.85);
+
+  box-shadow:
+    0 0 12px rgba(207, 233, 214, 0.55);
+
+  animation:
+    identity-scroll-line
+    2.2s
+    ease-in-out
+    infinite;
+}
+
+@keyframes identity-scroll-line {
+  from {
+    left: -30%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
+
+
+/* ============================================================
+   FRAME
+   ============================================================ */
+
+.identity-frame {
+  position: absolute;
+  inset: 28px;
+
+  z-index: 45;
+
+  pointer-events: none;
+}
+
+.identity-frame span {
+  position: absolute;
+
+  display: block;
+
+  width: 42px;
+  height: 42px;
+}
+
+.identity-frame span::before,
+.identity-frame span::after {
+  content: "";
+
+  position: absolute;
+
+  background:
+    rgba(224, 234, 226, 0.18);
+}
+
+.identity-frame span::before {
+  width: 100%;
+  height: 1px;
+}
+
+.identity-frame span::after {
+  width: 1px;
+  height: 100%;
+}
+
+.identity-frame span:nth-child(1) {
+  left: 0;
+  top: 0;
+}
+
+.identity-frame span:nth-child(2) {
+  right: 0;
+  top: 0;
+
+  transform: rotate(90deg);
+}
+
+.identity-frame span:nth-child(3) {
+  right: 0;
+  bottom: 0;
+
+  transform: rotate(180deg);
+}
+
+.identity-frame span:nth-child(4) {
+  left: 0;
+  bottom: 0;
+
+  transform: rotate(270deg);
+}
+
+
+/* ============================================================
+   RULES
+   ============================================================ */
+
+.identity-top-rule,
+.identity-bottom-rule {
+  position: absolute;
+
+  left: 50px;
+  right: 50px;
+
+  z-index: 44;
+
+  height: 1px;
+
+  pointer-events: none;
+}
+
+.identity-top-rule {
+  top: 28px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(225, 234, 227, 0.18),
+      transparent 60%
+    );
+}
+
+.identity-bottom-rule {
+  bottom: 28px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(225, 234, 227, 0.12)
+    );
+}
+
+
+/* ============================================================
+   NOISE
+   ============================================================ */
+
+.identity-noise {
+  position: absolute;
+  inset: -5%;
+
+  z-index: 50;
+
+  pointer-events: none;
+
+  opacity: 0.045;
+
+  background-image:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E");
+
+  mix-blend-mode: soft-light;
+
+  animation:
+    identity-noise
+    0.25s
+    steps(2)
+    infinite;
+}
+
+@keyframes identity-noise {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  25% {
+    transform: translate(-1%, 1%);
+  }
+
+  50% {
+    transform: translate(1%, -1%);
+  }
+
+  75% {
+    transform: translate(1%, 1%);
+  }
+
+  100% {
+    transform: translate(-1%, -1%);
+  }
+}
+
+
+/* ============================================================
+   VIGNETTE
+   ============================================================ */
+
+.identity-vignette {
+  position: absolute;
+  inset: 0;
+
+  z-index: 60;
+
+  pointer-events: none;
+
+  opacity: 0;
+
+  background:
+    radial-gradient(
+      ellipse at 58% 45%,
+      transparent 15%,
+      rgba(0, 0, 0, 0.1) 44%,
+      rgba(0, 0, 0, 0.5) 78%,
+      rgba(0, 0, 0, 0.95) 100%
+    );
+
+  will-change: opacity;
+}
+
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 1050px) {
+
+  .identity-image-wrap {
+    right: -8%;
+
+    width: 73vw;
+  }
+
+  .identity-first-name,
+  .identity-surname {
+    font-size: clamp(
+      88px,
+      14vw,
+      170px
+    );
+  }
+
+  .identity-first-name {
+    left: 35px;
+  }
+
+  .identity-surname {
+    left: 12%;
+  }
+
+  .identity-name-line,
+  .identity-role {
+    left: 38px;
+  }
+
+  .identity-side-data {
+    left: 35px;
+  }
+
+  .identity-experience {
+    right: 7%;
+  }
+
+  .identity-chapter {
+    left: 36px;
+  }
+
+  .identity-timeline {
+    left: 36px;
+    right: 36px;
+  }
+
+  .identity-side-top {
+    right: 37px;
+  }
+
+  .identity-side-bottom {
+    right: 37px;
+  }
+
+  .identity-top-rule,
+  .identity-bottom-rule {
+    left: 35px;
+    right: 35px;
+  }
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 700px) {
+
+  .identity {
+    height: 430vh;
+  }
+
+  .identity-sticky {
+    height: 100svh;
+  }
+
+  .identity-world {
+    inset: -10%;
+  }
+
+  .identity-atmosphere {
+    inset: -18%;
+  }
+
+  .identity-forest-back {
+    filter: blur(10px);
+  }
+
+  .identity-forest-mid {
+    filter: blur(5px);
+  }
+
+  .identity-image-wrap {
+    top: -3%;
+
+    right: -32%;
+
+    width: 125vw;
+    height: 76vh;
+  }
+
+  .identity-image img {
+    object-position: 57% center;
+
+    filter:
+      grayscale(100%)
+      contrast(1.14)
+      brightness(0.76);
+  }
+
+  .identity-image-glow {
+    right: -4%;
+    top: 10%;
+
+    width: 90vw;
+    height: 68vh;
+  }
+
+  .identity-image-light {
+    right: -12%;
+    top: 0;
+
+    width: 120vw;
+    height: 80vh;
+
+    background:
+      linear-gradient(
+        180deg,
+        rgba(2, 4, 3, 0.04),
+        rgba(2, 4, 3, 0.08) 42%,
+        rgba(2, 4, 3, 0.82) 100%
+      ),
+      linear-gradient(
+        90deg,
+        rgba(2, 4, 3, 0.75),
+        transparent 75%
+      );
+  }
+
+  .identity-orbit {
+    left: 66%;
+    top: 35%;
+
+    width: 110vw;
+
+    opacity: 0.7;
+  }
+
+  .identity-orbit-outer {
+    border-color:
+      rgba(193, 220, 200, 0.11);
+  }
+
+  .identity-fragments {
+    opacity: 0.7;
+  }
+
+  .identity-energy {
+    opacity: 0.65;
+  }
+
+  .identity-grid {
+    opacity: 0.07;
+
+    background-size:
+      60px 60px;
+  }
+
+  .identity-top-rule {
+    top: 19px;
+
+    left: 22px;
+    right: 22px;
+  }
+
+  .identity-bottom-rule {
+    bottom: 19px;
+
+    left: 22px;
+    right: 22px;
+  }
+
+  .identity-frame {
+    inset: 19px;
+  }
+
+  .identity-frame span {
+    width: 27px;
+    height: 27px;
+  }
+
+  .identity-chapter {
+    top: 39px;
+    left: 23px;
+
+    gap: 10px;
+
+    font-size: 7px;
+
+    letter-spacing: 0.2em;
+  }
+
+  .identity-chapter-line {
+    width: 24px;
+  }
+
+  .identity-giant-word {
+    font-size: 31vw;
+  }
+
+  .identity-giant-word-back {
+    top: 19%;
+  }
+
+  .identity-giant-word:not(.identity-giant-word-back) {
+    bottom: 17%;
+  }
+
+  .identity-left-marker {
+    left: 17px;
+    top: 42%;
+
+    font-size: 5px;
+
+    gap: 7px;
+  }
+
+  .identity-left-marker i {
+    height: 15px;
+  }
+
+  .identity-first-name,
+  .identity-surname {
+    font-size: 19vw;
+
+    line-height: 0.8;
+  }
+
+  .identity-first-name {
+    left: 20px;
+    bottom: 28%;
+  }
+
+  .identity-surname {
+    left: 15%;
+    bottom: 20%;
+  }
+
+  .identity-name-line {
+    left: 22px;
+    bottom: 17.2%;
+
+    width: 60vw;
+  }
+
+  .identity-role {
+    left: 22px;
+    bottom: 13.4%;
+
+    max-width: 72vw;
+
+    font-size: 6px;
+
+    letter-spacing: 0.13em;
+
+    line-height: 1.9;
+  }
+
+  .identity-role i {
+    margin:
+      0 6px;
+  }
+
+  .identity-experience {
+    right: 20px;
+    bottom: 10.5%;
+
+    gap: 8px;
+  }
+
+  .identity-experience strong {
+    font-size: 18vw;
+  }
+
+  .identity-experience-label {
+    gap: 3px;
+
+    padding-bottom: 3px;
+  }
+
+  .identity-experience-label span {
+    font-size: 5px;
+
+    letter-spacing: 0.15em;
+  }
+
+  .identity-side-data {
+    left: 20px;
+    top: 25%;
+
+    font-size: 5px;
+  }
+
+  .identity-side-data strong {
+    font-size: 6px;
+  }
+
+  .identity-side-top {
+    top: 41px;
+    right: 23px;
+
+    font-size: 5px;
+  }
+
+  .identity-side-bottom {
+    right: 22px;
+    bottom: 20%;
+
+    gap: 7px;
+
+    font-size: 5px;
+  }
+
+  .identity-side-bottom i {
+    width: 23px;
+  }
+
+  .identity-timeline {
+    left: 22px;
+    right: 22px;
+    bottom: 4.5%;
+  }
+
+  .identity-timeline-years {
+    font-size: 5px;
+
+    margin-bottom: 6px;
+  }
+
+  .identity-timeline-caption {
+    margin-top: 6px;
+
+    font-size: 4.5px;
+  }
+
+  .identity-timeline-marker {
+    width: 5px;
+    height: 5px;
+  }
+
+  .identity-scroll {
+    right: 11px;
+
+    font-size: 5px;
+
+    gap: 8px;
+  }
+
+  .identity-scroll-line {
+    width: 40px;
+  }
+
+  .identity-flare {
+    left: 70%;
+    top: 34%;
+
+    width: 150px;
+    height: 150px;
+  }
+
+  .identity-particles-near {
+    opacity: 0.7;
+  }
+
+  .identity-light-beam {
+    width: 40%;
+
+    filter: blur(14px);
+  }
+
+  .fragment {
+    opacity: 0.55;
+  }
+
+  .fragment-1 {
+    width: 90px;
+  }
+
+  .fragment-2 {
+    width: 65px;
+  }
+
+  .fragment-3 {
+    width: 100px;
+  }
+
+  .fragment-4 {
+    width: 55px;
+  }
+
+  .fragment-5 {
+    width: 75px;
+  }
+
+  .fragment-6 {
+    width: 48px;
+  }
+
+  .fragment-7 {
+    width: 80px;
+  }
+
+  .fragment-8 {
+    width: 65px;
+  }
+}
+
+
+/* ============================================================
+   VERY SMALL MOBILE
+   ============================================================ */
+
+@media (max-width: 420px) {
+
+  .identity {
+    height: 410vh;
+  }
+
+  .identity-image-wrap {
+    right: -38%;
+
+    width: 137vw;
+  }
+
+  .identity-first-name {
+    bottom: 27%;
+  }
+
+  .identity-surname {
+    bottom: 19.8%;
+  }
+
+  .identity-role {
+    bottom: 13.1%;
+
+    max-width: 70vw;
+  }
+
+  .identity-experience {
+    bottom: 10.2%;
+  }
+}
+
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .identity-particles span,
+  .identity-scroll-line i,
+  .identity-noise {
+    animation: none;
+  }
+}
