@@ -1312,6 +1312,9 @@ i {
 
   resize: vertical;
 
+  overflow-x: hidden;
+  overflow-y: auto;
+
   background: transparent;
 
   color: var(--contact-text);
